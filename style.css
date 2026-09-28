@@ -11,22 +11,22 @@
 :root {
 
     /* Main dark brownish-pink */
-    --background: #725553;
-    --background-deep: #644846;
-    --background-soft: #80615e;
+    --background: #432725;
+    --background-deep: #281b1b;
+    --background-soft: #5a3b39;
 
     /* Light colors */
-    --cream: #fff7ed;
+    --cream: #d19e60;
     --cream-soft: #f5e3d8;
 
     /* Yellow */
-    --yellow: #f2d687;
+    --yellow: #f6d57d;
     --yellow-soft: #f8e9b8;
 
     /* Pink */
     --pink: #ed8bc9;
     --pink-soft: #f1c5df;
-    --pink-dark: #9b447f;
+    --pink-dark: #973e7b;
 
     /* Teal */
     --teal: #83d1c6;
