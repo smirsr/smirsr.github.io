@@ -22,16 +22,11 @@
 
 <body>
 
-    <!-- Decorative background shapes -->
-
     <div class="background-decoration decoration-one"></div>
     <div class="background-decoration decoration-two"></div>
 
 
-
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -39,48 +34,93 @@
             Smridhi Subedi
         </a>
 
-
         <div class="nav-links">
 
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#projects">
-                Projects
-            </a>
-
-            <a href="#experience">
-                Experience
-            </a>
-
-            <a href="#skills">
-                Skills
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
 
         </div>
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
 
     </nav>
 
 
+    <!-- MOBILE MENU OVERLAY -->
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <div
+        class="mobile-menu-overlay"
+        id="mobileMenuOverlay"
+    ></div>
+
+
+    <!-- MOBILE SIDE MENU -->
+
+    <aside
+        class="mobile-menu"
+        id="mobileMenu"
+    >
+
+        <div class="mobile-menu-header">
+
+            <span class="mobile-menu-title">
+                Navigate ✦
+            </span>
+
+            <button
+                class="close-menu-button"
+                id="closeMenuButton"
+                aria-label="Close navigation menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="mobile-menu-links">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <div class="mobile-menu-bottom">
+
+            <p>Computer Engineering</p>
+
+            <span>
+                Embedded • Hardware • Software
+            </span>
+
+        </div>
+
+    </aside>
+
+
+    <!-- HERO -->
 
     <header class="hero" id="home">
-
 
         <div class="hero-content">
 
             <p class="eyebrow">
                 ✦ HELLO, I'M
             </p>
-
 
             <h1>
                 Smridhi
@@ -89,11 +129,9 @@
                 </span>
             </h1>
 
-
             <h2>
                 Computer Engineering Student
             </h2>
-
 
             <p class="hero-description">
 
@@ -113,7 +151,6 @@
                     Explore My Projects
                 </a>
 
-
                 <a
                     href="documents/Smridhi-Subedi-Resume.pdf"
                     class="button secondary-button"
@@ -121,7 +158,6 @@
                 >
                     View Resume ↗
                 </a>
-
 
                 <a
                     href="documents/Smridhi-Subedi-Cover-Letter.pdf"
@@ -171,7 +207,6 @@
             </div>
 
         </div>
-
 
 
         <div class="hero-visual">
@@ -228,7 +263,6 @@
                         hardware_software_integration
                     </p>
 
-
                     <p class="terminal-cursor">
                         ▌
                     </p>
@@ -251,10 +285,7 @@
     </header>
 
 
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
+    <!-- ABOUT -->
 
     <section id="about">
 
@@ -320,10 +351,7 @@
     </section>
 
 
-
-    <!-- =========================
-         PROJECTS
-    ========================== -->
+    <!-- PROJECTS -->
 
     <section id="projects">
 
@@ -342,10 +370,11 @@
 
 
         <p class="section-intro">
-            A collection of software, hardware, and engineering projects
-            I've worked on.
-        </p>
 
+            A collection of software, hardware, and engineering
+            projects I've worked on.
+
+        </p>
 
 
         <div class="project-grid">
@@ -354,7 +383,6 @@
             <!-- JAVA GAME -->
 
             <article class="project-card featured-card">
-
 
                 <div class="project-photo-wrapper">
 
@@ -377,18 +405,15 @@
                         PROJECT 01
                     </p>
 
-
                     <h3>
                         2D Adventure Game
                     </h3>
-
 
                     <p>
                         Java-based 2D adventure RPG built using
                         object-oriented programming principles,
                         data structures, and structured gameplay logic.
                     </p>
-
 
                     <div class="tags">
 
@@ -398,7 +423,6 @@
                         <span>Game Development</span>
 
                     </div>
-
 
                     <a
                         href="projects/java-game.html"
@@ -413,22 +437,22 @@
             </article>
 
 
-
             <!-- LIGHT INSTRUMENT -->
 
             <article class="project-card">
 
-
                 <div class="project-photo-wrapper">
+
                     <img
-                     src="images/light-controlled-instrument/Light-Controlled-Instrument.png"
-                     alt=""Screenshot of Light Controlled Instrument in Tinkercad"
-                     class="project-card-image"
-                     >
+                        src="images/light-controlled-instrument/Light-Controlled-Instrument.png"
+                        alt="Light Controlled Instrument circuit in Tinkercad"
+                        class="project-card-image"
+                    >
 
                     <span class="project-type">
-                        Embedded Systems
+                        EMBEDDED SYSTEMS
                     </span>
+
                 </div>
 
 
@@ -438,18 +462,15 @@
                         PROJECT 02
                     </p>
 
-
                     <h3>
                         Light-Controlled Instrument
                     </h3>
 
-
                     <p>
-                        Sensor-driven instrument using an Arduino Uno,
-                        photoresistor, slide switches, and four buzzers
-                        to generate different sound modes.
+                        Arduino-based instrument using a photoresistor,
+                        four switches, and four buzzers to transform
+                        real-time light readings into interactive sound.
                     </p>
-
 
                     <div class="tags">
 
@@ -460,25 +481,22 @@
 
                     </div>
 
-
-                    <a 
-                    href="projects/light-controlled-instrument.html"
-                    class="project-button"
+                    <a
+                        href="projects/light-controlled-instrument.html"
+                        class="project-button"
                     >
-                    View Project
-                    <span>→</span>
-                </a>
+                        View Project
+                        <span>→</span>
+                    </a>
 
                 </div>
 
             </article>
 
 
-
             <!-- GROW YOUR TIME -->
 
             <article class="project-card">
-
 
                 <div class="project-placeholder pink-placeholder">
 
@@ -495,18 +513,15 @@
                         PROJECT 03
                     </p>
 
-
                     <h3>
                         WEhack 2025: GrowYourTime
                     </h3>
-
 
                     <p>
                         Tamagotchi-style task and time-management
                         game developed during WEhack 2025 with a
                         focus on productive habits and interactive gameplay.
                     </p>
-
 
                     <div class="tags">
 
@@ -516,7 +531,6 @@
                         <span>Hackathon</span>
 
                     </div>
-
 
                     <a
                         href="https://github.com/WEHACK-GROWYOURTIME/GrowYourTime"
@@ -531,16 +545,12 @@
 
             </article>
 
-
         </div>
 
     </section>
 
 
-
-    <!-- =========================
-         EXPERIENCE
-    ========================== -->
+    <!-- EXPERIENCE -->
 
     <section id="experience">
 
@@ -565,7 +575,6 @@
 
                 <div class="timeline-marker"></div>
 
-
                 <div class="timeline-content">
 
                     <div class="experience-header">
@@ -582,13 +591,11 @@
 
                         </div>
 
-
                         <span class="experience-date">
                             Jul 2024 — Oct 2024
                         </span>
 
                     </div>
-
 
                     <p>
                         Advised customers on PCs, 3D printers,
@@ -602,11 +609,9 @@
             </div>
 
 
-
             <div class="timeline-item">
 
                 <div class="timeline-marker"></div>
-
 
                 <div class="timeline-content">
 
@@ -624,13 +629,11 @@
 
                         </div>
 
-
                         <span class="experience-date">
                             Jun 2024 — Aug 2024
                         </span>
 
                     </div>
-
 
                     <p>
                         Improved front-end user experience and
@@ -643,11 +646,9 @@
             </div>
 
 
-
             <div class="timeline-item">
 
                 <div class="timeline-marker"></div>
-
 
                 <div class="timeline-content">
 
@@ -665,13 +666,11 @@
 
                         </div>
 
-
                         <span class="experience-date">
                             Mar 2023 — Jul 2024
                         </span>
 
                     </div>
-
 
                     <p>
                         Taught Python, Java, HTML, and robotics
@@ -683,16 +682,12 @@
 
             </div>
 
-
         </div>
 
     </section>
 
 
-
-    <!-- =========================
-         SKILLS
-    ========================== -->
+    <!-- SKILLS -->
 
     <section id="skills">
 
@@ -708,7 +703,6 @@
             </h2>
 
         </div>
-
 
 
         <div class="skill-grid">
@@ -740,7 +734,6 @@
             </div>
 
 
-
             <div class="skill-card">
 
                 <div class="skill-icon teal-background">
@@ -762,7 +755,6 @@
                 </div>
 
             </div>
-
 
 
             <div class="skill-card">
@@ -788,16 +780,12 @@
 
             </div>
 
-
         </div>
 
     </section>
 
 
-
-    <!-- =========================
-         EDUCATION
-    ========================== -->
+    <!-- EDUCATION -->
 
     <section id="education">
 
@@ -856,10 +844,7 @@
     </section>
 
 
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
+    <!-- CONTACT -->
 
     <section id="contact">
 
@@ -869,11 +854,9 @@
                 ✦ LET'S CONNECT
             </p>
 
-
             <h2>
                 Want to talk engineering?
             </h2>
-
 
             <p>
                 I'm always interested in learning about new
@@ -883,12 +866,12 @@
 
             <div class="contact-buttons">
 
-                <a
-                    href="mailto:smridhisubedi@yahoo.com"
-                    class="button primary-button"
+                <button
+                    class="button primary-button email-popup-button"
+                    id="emailPopupButton"
                 >
                     Email Me
-                </a>
+                </button>
 
 
                 <a
@@ -915,10 +898,7 @@
     </section>
 
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -929,6 +909,95 @@
         </p>
 
     </footer>
+
+
+    <!-- EMAIL POPUP -->
+
+    <div
+        class="email-modal-overlay"
+        id="emailModal"
+    >
+
+        <div class="email-modal">
+
+            <button
+                class="email-modal-close"
+                id="emailModalClose"
+                aria-label="Close email popup"
+            >
+                ×
+            </button>
+
+
+            <div class="email-modal-icon">
+                ✉
+            </div>
+
+
+            <p class="eyebrow">
+                ✦ LET'S CONNECT
+            </p>
+
+
+            <h2>
+                Let's get in touch
+                <span class="accent-dot">.</span>
+            </h2>
+
+
+            <p class="email-modal-description">
+
+                Copy my email below and reach out about
+                engineering, projects, or opportunities.
+
+            </p>
+
+
+            <div class="email-copy-box">
+
+                <span id="emailText">
+                    smridhisubedi@yahoo.com
+                </span>
+
+                <button
+                    id="copyEmailButton"
+                    class="copy-email-button"
+                >
+                    Copy Email
+                </button>
+
+            </div>
+
+
+            <p
+                class="copy-message"
+                id="copyMessage"
+            >
+                ✓ Email copied!
+            </p>
+
+
+            <div class="email-social-links">
+
+                <a
+                    href="https://linkedin.com/in/smridhi-subedi-8a55b8218"
+                    target="_blank"
+                >
+                    LinkedIn ↗
+                </a>
+
+                <a
+                    href="https://github.com/smirsr"
+                    target="_blank"
+                >
+                    GitHub ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
     <script src="script.js"></script>
