@@ -15,7 +15,6 @@ const mobileOverlay =
     document.getElementById("mobileOverlay");
 
 
-// Open menu
 function openMenu() {
 
     if (!mobileMenu || !mobileOverlay) {
@@ -47,7 +46,6 @@ function openMenu() {
 }
 
 
-// Close menu
 function closeMenu() {
 
     if (!mobileMenu || !mobileOverlay) {
@@ -79,7 +77,6 @@ function closeMenu() {
 }
 
 
-// Hamburger
 if (menuButton) {
 
     menuButton.addEventListener(
@@ -90,7 +87,6 @@ if (menuButton) {
 }
 
 
-// Close button
 if (closeMenuButton) {
 
     closeMenuButton.addEventListener(
@@ -101,7 +97,6 @@ if (closeMenuButton) {
 }
 
 
-// Overlay
 if (mobileOverlay) {
 
     mobileOverlay.addEventListener(
@@ -112,7 +107,6 @@ if (mobileOverlay) {
 }
 
 
-// Mobile links
 const mobileLinks =
     document.querySelectorAll(
         ".mobile-links a"
@@ -164,7 +158,6 @@ const copyMessage =
     );
 
 
-// Open email
 function openEmailModal() {
 
     if (!emailModal) {
@@ -189,7 +182,6 @@ function openEmailModal() {
 }
 
 
-// Close email
 function closeEmailModal() {
 
     if (!emailModal) {
@@ -212,7 +204,6 @@ function closeEmailModal() {
 }
 
 
-// Email button
 if (emailButton) {
 
     emailButton.addEventListener(
@@ -223,7 +214,6 @@ if (emailButton) {
 }
 
 
-// X
 if (emailClose) {
 
     emailClose.addEventListener(
@@ -234,17 +224,13 @@ if (emailClose) {
 }
 
 
-// Click outside
 if (emailModal) {
 
     emailModal.addEventListener(
         "click",
         function (event) {
 
-            if (
-                event.target ===
-                emailModal
-            ) {
+            if (event.target === emailModal) {
 
                 closeEmailModal();
 
@@ -274,7 +260,6 @@ if (
                     .textContent
                     .trim();
 
-
             try {
 
                 await navigator
@@ -297,7 +282,6 @@ if (
 }
 
 
-// Fallback for browsers
 function fallbackCopy(email) {
 
     const textArea =
@@ -334,7 +318,6 @@ function fallbackCopy(email) {
 }
 
 
-// Show success
 function showCopySuccess() {
 
     if (!copyEmailButton) {
@@ -384,10 +367,7 @@ document.addEventListener(
     "keydown",
     function (event) {
 
-        if (
-            event.key ===
-            "Escape"
-        ) {
+        if (event.key === "Escape") {
 
             closeMenu();
 
@@ -400,17 +380,14 @@ document.addEventListener(
 
 
 // =========================================================
-// DESKTOP RESIZE
+// CLOSE MOBILE MENU ON DESKTOP
 // =========================================================
 
 window.addEventListener(
     "resize",
     function () {
 
-        if (
-            window.innerWidth >
-            900
-        ) {
+        if (window.innerWidth > 900) {
 
             closeMenu();
 
