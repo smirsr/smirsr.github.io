@@ -1,5 +1,5 @@
 // =========================================================
-// MOBILE NAVIGATION
+// MOBILE MENU
 // =========================================================
 
 const menuButton =
@@ -11,23 +11,20 @@ const closeMenuButton =
 const mobileMenu =
     document.getElementById("mobileMenu");
 
-const mobileMenuOverlay =
-    document.getElementById("mobileMenuOverlay");
+const mobileOverlay =
+    document.getElementById("mobileOverlay");
 
 
-// ---------------------------------------------------------
-// OPEN MOBILE MENU
-// ---------------------------------------------------------
+// Open menu
+function openMenu() {
 
-function openMobileMenu() {
-
-    if (!mobileMenu || !mobileMenuOverlay) {
+    if (!mobileMenu || !mobileOverlay) {
         return;
     }
 
     mobileMenu.classList.add("active");
 
-    mobileMenuOverlay.classList.add("active");
+    mobileOverlay.classList.add("active");
 
     mobileMenu.setAttribute(
         "aria-hidden",
@@ -43,25 +40,23 @@ function openMobileMenu() {
 
     }
 
-    document.body.style.overflow =
-        "hidden";
+    document.body.classList.add(
+        "no-scroll"
+    );
 
 }
 
 
-// ---------------------------------------------------------
-// CLOSE MOBILE MENU
-// ---------------------------------------------------------
+// Close menu
+function closeMenu() {
 
-function closeMobileMenu() {
-
-    if (!mobileMenu || !mobileMenuOverlay) {
+    if (!mobileMenu || !mobileOverlay) {
         return;
     }
 
     mobileMenu.classList.remove("active");
 
-    mobileMenuOverlay.classList.remove("active");
+    mobileOverlay.classList.remove("active");
 
     mobileMenu.setAttribute(
         "aria-hidden",
@@ -77,60 +72,50 @@ function closeMobileMenu() {
 
     }
 
-    document.body.style.overflow = "";
+    document.body.classList.remove(
+        "no-scroll"
+    );
 
 }
 
 
-// ---------------------------------------------------------
-// HAMBURGER
-// ---------------------------------------------------------
-
+// Hamburger
 if (menuButton) {
 
     menuButton.addEventListener(
         "click",
-        openMobileMenu
+        openMenu
     );
 
 }
 
 
-// ---------------------------------------------------------
-// CLOSE BUTTON
-// ---------------------------------------------------------
-
+// Close button
 if (closeMenuButton) {
 
     closeMenuButton.addEventListener(
         "click",
-        closeMobileMenu
+        closeMenu
     );
 
 }
 
 
-// ---------------------------------------------------------
-// CLICK OUTSIDE MENU
-// ---------------------------------------------------------
+// Overlay
+if (mobileOverlay) {
 
-if (mobileMenuOverlay) {
-
-    mobileMenuOverlay.addEventListener(
+    mobileOverlay.addEventListener(
         "click",
-        closeMobileMenu
+        closeMenu
     );
 
 }
 
 
-// ---------------------------------------------------------
-// CLOSE MENU AFTER LINK CLICK
-// ---------------------------------------------------------
-
+// Mobile links
 const mobileLinks =
     document.querySelectorAll(
-        ".mobile-menu-links a"
+        ".mobile-links a"
     );
 
 
@@ -138,19 +123,19 @@ mobileLinks.forEach((link) => {
 
     link.addEventListener(
         "click",
-        closeMobileMenu
+        closeMenu
     );
 
 });
 
 
 // =========================================================
-// EMAIL POPUP
+// EMAIL MODAL
 // =========================================================
 
-const emailPopupButton =
+const emailButton =
     document.getElementById(
-        "emailPopupButton"
+        "emailButton"
     );
 
 const emailModal =
@@ -158,9 +143,9 @@ const emailModal =
         "emailModal"
     );
 
-const emailModalClose =
+const emailClose =
     document.getElementById(
-        "emailModalClose"
+        "emailClose"
     );
 
 const copyEmailButton =
@@ -179,58 +164,58 @@ const copyMessage =
     );
 
 
-// ---------------------------------------------------------
-// OPEN EMAIL POPUP
-// ---------------------------------------------------------
-
+// Open email
 function openEmailModal() {
 
     if (!emailModal) {
         return;
     }
 
-    emailModal.classList.add("active");
+    closeMenu();
+
+    emailModal.classList.add(
+        "active"
+    );
 
     emailModal.setAttribute(
         "aria-hidden",
         "false"
     );
 
-    document.body.style.overflow =
-        "hidden";
+    document.body.classList.add(
+        "no-scroll"
+    );
 
 }
 
 
-// ---------------------------------------------------------
-// CLOSE EMAIL POPUP
-// ---------------------------------------------------------
-
+// Close email
 function closeEmailModal() {
 
     if (!emailModal) {
         return;
     }
 
-    emailModal.classList.remove("active");
+    emailModal.classList.remove(
+        "active"
+    );
 
     emailModal.setAttribute(
         "aria-hidden",
         "true"
     );
 
-    document.body.style.overflow = "";
+    document.body.classList.remove(
+        "no-scroll"
+    );
 
 }
 
 
-// ---------------------------------------------------------
-// EMAIL BUTTON
-// ---------------------------------------------------------
+// Email button
+if (emailButton) {
 
-if (emailPopupButton) {
-
-    emailPopupButton.addEventListener(
+    emailButton.addEventListener(
         "click",
         openEmailModal
     );
@@ -238,13 +223,10 @@ if (emailPopupButton) {
 }
 
 
-// ---------------------------------------------------------
-// EMAIL X BUTTON
-// ---------------------------------------------------------
+// X
+if (emailClose) {
 
-if (emailModalClose) {
-
-    emailModalClose.addEventListener(
+    emailClose.addEventListener(
         "click",
         closeEmailModal
     );
@@ -252,17 +234,17 @@ if (emailModalClose) {
 }
 
 
-// ---------------------------------------------------------
-// CLICK OUTSIDE EMAIL CARD
-// ---------------------------------------------------------
-
+// Click outside
 if (emailModal) {
 
     emailModal.addEventListener(
         "click",
         function (event) {
 
-            if (event.target === emailModal) {
+            if (
+                event.target ===
+                emailModal
+            ) {
 
                 closeEmailModal();
 
@@ -278,22 +260,28 @@ if (emailModal) {
 // COPY EMAIL
 // =========================================================
 
-if (copyEmailButton && emailText) {
+if (
+    copyEmailButton &&
+    emailText
+) {
 
     copyEmailButton.addEventListener(
         "click",
         async function () {
 
             const email =
-                emailText.textContent.trim();
+                emailText
+                    .textContent
+                    .trim();
+
 
             try {
 
-                await navigator.clipboard.writeText(
-                    email
-                );
+                await navigator
+                    .clipboard
+                    .writeText(email);
 
-                showCopiedMessage();
+                showCopySuccess();
 
             }
 
@@ -309,10 +297,7 @@ if (copyEmailButton && emailText) {
 }
 
 
-// ---------------------------------------------------------
-// FALLBACK COPY
-// ---------------------------------------------------------
-
+// Fallback for browsers
 function fallbackCopy(email) {
 
     const textArea =
@@ -327,9 +312,6 @@ function fallbackCopy(email) {
 
     textArea.style.opacity =
         "0";
-
-    textArea.style.pointerEvents =
-        "none";
 
     document.body.appendChild(
         textArea
@@ -347,16 +329,13 @@ function fallbackCopy(email) {
         textArea
     );
 
-    showCopiedMessage();
+    showCopySuccess();
 
 }
 
 
-// ---------------------------------------------------------
-// COPIED MESSAGE
-// ---------------------------------------------------------
-
-function showCopiedMessage() {
+// Show success
+function showCopySuccess() {
 
     if (!copyEmailButton) {
         return;
@@ -379,7 +358,7 @@ function showCopiedMessage() {
         function () {
 
             copyEmailButton.textContent =
-                "Copy Email";
+                "Copy";
 
 
             if (copyMessage) {
@@ -405,9 +384,12 @@ document.addEventListener(
     "keydown",
     function (event) {
 
-        if (event.key === "Escape") {
+        if (
+            event.key ===
+            "Escape"
+        ) {
 
-            closeMobileMenu();
+            closeMenu();
 
             closeEmailModal();
 
@@ -418,16 +400,19 @@ document.addEventListener(
 
 
 // =========================================================
-// WINDOW RESIZE
+// DESKTOP RESIZE
 // =========================================================
 
 window.addEventListener(
     "resize",
     function () {
 
-        if (window.innerWidth > 900) {
+        if (
+            window.innerWidth >
+            900
+        ) {
 
-            closeMobileMenu();
+            closeMenu();
 
         }
 
@@ -451,13 +436,15 @@ internalLinks.forEach((link) => {
         "click",
         function (event) {
 
-            const targetId =
-                link.getAttribute("href");
+            const targetID =
+                link.getAttribute(
+                    "href"
+                );
 
 
             if (
-                !targetId ||
-                targetId === "#"
+                !targetID ||
+                targetID === "#"
             ) {
 
                 return;
@@ -467,7 +454,7 @@ internalLinks.forEach((link) => {
 
             const target =
                 document.querySelector(
-                    targetId
+                    targetID
                 );
 
 

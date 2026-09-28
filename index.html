@@ -11,75 +11,90 @@
 
     <meta
         name="description"
-        content="Smridhi Subedi - Computer Engineering student portfolio featuring embedded systems, software, hardware, and engineering projects."
+        content="Smridhi Subedi - Computer Engineering student portfolio featuring embedded systems, hardware, software, and engineering projects."
     >
 
     <title>Smridhi Subedi | Computer Engineering</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 
 <body>
 
-    <div class="background-decoration decoration-one"></div>
-    <div class="background-decoration decoration-two"></div>
+    <!-- =====================================================
+         DECORATIVE BACKGROUND
+    ====================================================== -->
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+    <div class="background-shape shape-three"></div>
 
 
-    <!-- NAVIGATION -->
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
-    <nav>
+    <nav class="navbar">
 
-        <a href="#home" class="nav-name">
-            Smridhi Subedi
-        </a>
+        <div class="nav-inner">
 
-        <div class="nav-links">
+            <a href="#home" class="nav-logo">
+                Smridhi Subedi <span>✦</span>
+            </a>
 
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+
+            <div class="desktop-nav">
+
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
 
         </div>
-
-        <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="Open navigation menu"
-        >
-            ☰
-        </button>
 
     </nav>
 
 
-    <!-- MOBILE MENU OVERLAY -->
+    <!-- =====================================================
+         MOBILE MENU
+    ====================================================== -->
 
     <div
-        class="mobile-menu-overlay"
-        id="mobileMenuOverlay"
+        class="mobile-overlay"
+        id="mobileOverlay"
     ></div>
 
-
-    <!-- MOBILE SIDE MENU -->
 
     <aside
         class="mobile-menu"
         id="mobileMenu"
+        aria-hidden="true"
     >
 
         <div class="mobile-menu-header">
 
-            <span class="mobile-menu-title">
-                Navigate ✦
+            <span>
+                navigate ✦
             </span>
 
             <button
-                class="close-menu-button"
                 id="closeMenuButton"
-                aria-label="Close navigation menu"
+                class="close-menu-button"
+                aria-label="Close menu"
             >
                 ×
             </button>
@@ -87,21 +102,23 @@
         </div>
 
 
-        <div class="mobile-menu-links">
+        <div class="mobile-links">
 
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
             <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
 
         </div>
 
 
-        <div class="mobile-menu-bottom">
+        <div class="mobile-menu-footer">
 
-            <p>Computer Engineering</p>
+            <strong>
+                Computer Engineering
+            </strong>
 
             <span>
                 Embedded • Hardware • Software
@@ -112,535 +129,801 @@
     </aside>
 
 
-    <!-- HERO -->
+    <main>
 
-    <header class="hero" id="home">
+        <!-- =================================================
+             HERO
+        ================================================== -->
 
-        <div class="hero-content">
+        <section
+            class="hero"
+            id="home"
+        >
 
-            <p class="eyebrow">
-                ✦ HELLO, I'M
-            </p>
+            <!-- LEFT -->
 
-            <h1>
-                Smridhi
-                <span class="pink-text">
-                    Subedi
-                </span>
-            </h1>
+            <div class="hero-content">
 
-            <h2>
-                Computer Engineering Student
-            </h2>
-
-            <p class="hero-description">
-
-                I enjoy building projects where hardware and software
-                come together — from embedded systems and electronics
-                to programming and computer architecture.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a
-                    href="#projects"
-                    class="button primary-button"
-                >
-                    Explore My Projects
-                </a>
-
-                <a
-                    href="documents/Smridhi-Subedi-Resume.pdf"
-                    class="button secondary-button"
-                    target="_blank"
-                >
-                    View Resume ↗
-                </a>
-
-                <a
-                    href="documents/Smridhi-Subedi-Cover-Letter.pdf"
-                    class="button secondary-button"
-                    target="_blank"
-                >
-                    Cover Letter ↗
-                </a>
-
-            </div>
-
-
-            <div class="quick-info">
-
-                <div>
-                    <span class="quick-label">
-                        STUDYING
-                    </span>
-
-                    <strong>
-                        Computer Engineering
-                    </strong>
-                </div>
-
-
-                <div>
-                    <span class="quick-label">
-                        UNIVERSITY
-                    </span>
-
-                    <strong>
-                        UT Dallas
-                    </strong>
-                </div>
-
-
-                <div>
-                    <span class="quick-label">
-                        INTERESTS
-                    </span>
-
-                    <strong>
-                        Embedded • Hardware • Software
-                    </strong>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="hero-visual">
-
-            <div class="hero-card">
-
-                <div class="terminal-top">
-
-                    <span class="terminal-dot pink-dot"></span>
-                    <span class="terminal-dot orange-dot"></span>
-                    <span class="terminal-dot teal-dot"></span>
-
-                </div>
-
-
-                <div class="terminal-content">
-
-                    <p>
-                        <span class="terminal-pink">smridhi</span>@portfolio
-                        <span class="terminal-teal">~</span> %
-                    </p>
-
-                    <p class="terminal-command">
-                        whoami
-                    </p>
-
-                    <p class="terminal-result">
-                        Computer Engineering Student
-                    </p>
-
-
-                    <p>
-                        <span class="terminal-pink">smridhi</span>@portfolio
-                        <span class="terminal-teal">~</span> %
-                    </p>
-
-                    <p class="terminal-command">
-                        interests
-                    </p>
-
-                    <p class="terminal-result">
-                        embedded_systems
-                    </p>
-
-                    <p class="terminal-result">
-                        computer_architecture
-                    </p>
-
-                    <p class="terminal-result">
-                        digital_logic
-                    </p>
-
-                    <p class="terminal-result">
-                        hardware_software_integration
-                    </p>
-
-                    <p class="terminal-cursor">
-                        ▌
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="floating-label label-one">
-                &lt;/&gt; build
-            </div>
-
-            <div class="floating-label label-two">
-                ⚡ debug
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                01.
-            </p>
-
-            <h2>
-                A little about me
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <div class="about-layout">
-
-            <div class="about-text">
-
-                <p>
-                    I'm pursuing a B.S. in Computer Engineering at
-                    The University of Texas at Dallas.
+                <p class="eyebrow">
+                    ✦ HELLO, I'M
                 </p>
 
-                <p>
-                    My interests include embedded systems, computer
-                    architecture, digital logic, electronics, circuit
-                    design, and hardware-software integration.
+
+                <h1>
+                    Smridhi
+                    <span>Subedi</span>
+                </h1>
+
+
+                <h2>
+                    Computer Engineering Student
+                </h2>
+
+
+                <p class="hero-description">
+                    I enjoy building projects where hardware and
+                    software come together — from embedded systems
+                    and electronics to programming and computer
+                    architecture.
                 </p>
 
-                <p>
-                    Through coursework and personal projects, I've
-                    worked with programming, circuit prototyping,
-                    microcontrollers, analog sensors, PCB design tools,
-                    and object-oriented software development.
-                </p>
 
-            </div>
-
-
-            <div class="about-card">
-
-                <p class="mini-title">
-                    CURRENTLY INTERESTED IN
-                </p>
-
-                <div class="interest-list">
-
-                    <span>✦ Embedded Systems</span>
-                    <span>✦ Computer Architecture</span>
-                    <span>✦ Digital Logic</span>
-                    <span>✦ Electronics</span>
-                    <span>✦ Hardware + Software</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-<!-- EDUCATION -->
-
-    <section id="education">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                02.
-            </p>
-
-            <h2>
-                Education
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <div class="education-card">
-
-            <div>
-
-                <p class="education-label">
-                    THE UNIVERSITY OF TEXAS AT DALLAS
-                </p>
-
-                <h3>
-                    B.S. Computer Engineering
-                </h3>
-
-                <p class="scholarship">
-                    ✦ Academic Excellence Scholarship
-                </p>
-
-            </div>
-
-
-            <div class="coursework">
-
-                <p class="mini-title">
-                    RELEVANT COURSEWORK
-                </p>
-
-                <div class="course-tags">
-
-                    <span>Embedded Design</span>
-                    <span>Computer Architecture</span>
-                    <span>Data Structures & Algorithms</span>
-                    <span>Operating Systems</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-     
-   <!-- SKILLS -->
-
-<section id="skills">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                03.
-            </p>
-
-            <h2>
-                My toolbox
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <div class="skill-grid">
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon pink-background">
-                    &lt;/&gt;
-                </div>
-
-                <h3>
-                    Programming
-                </h3>
-
-                <div class="skills">
-
-                    <span>C++</span>
-                    <span>Python</span>
-                    <span>Java</span>
-                    <span>JavaScript</span>
-                    <span>TypeScript</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Assembly</span>
-
-                </div>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon teal-background">
-                    ⚡
-                </div>
-
-                <h3>
-                    Embedded & Hardware
-                </h3>
-
-                <div class="skills">
-
-                    <span>Arduino Uno</span>
-                    <span>Circuit Prototyping</span>
-                    <span>ORCAD PCB</span>
-                    <span>Tinkercad</span>
-                    <span>MATLAB</span>
-
-                </div>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon orange-background">
-                    ✦
-                </div>
-
-                <h3>
-                    Tools
-                </h3>
-
-                <div class="skills">
-
-                    <span>Git</span>
-                    <span>GitHub</span>
-                    <span>VS Code</span>
-                    <span>SolidWorks</span>
-                    <span>Figma</span>
-                    <span>Eclipse</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    </section>
-    <!-- PROJECTS -->
-
-    <section id="projects">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                04.
-            </p>
-
-            <h2>
-                Things I've built
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <p class="section-intro">
-
-            A collection of software, hardware, and engineering
-            projects I've worked on.
-
-        </p>
-
-
-        <div class="project-grid">
-
-
-            <!-- JAVA GAME -->
-
-            <article class="project-card featured-card">
-
-                <div class="project-photo-wrapper">
-
-                    <img
-                        src="images/java-game/Java-Game-1.jpeg"
-                        alt="Screenshot of Java 2D adventure game"
-                        class="project-card-image"
-                    >
-
-                    <span class="project-type">
-                        SOFTWARE
-                    </span>
-
-                </div>
-
-
-                <div class="project-card-content">
-
-                    <p class="project-number">
-                        PROJECT 01
-                    </p>
-
-                    <h3>
-                        2D Adventure Game
-                    </h3>
-
-                    <p>
-                        Java-based 2D adventure RPG built using
-                        object-oriented programming principles,
-                        data structures, and structured gameplay logic.
-                    </p>
-
-                    <div class="tags">
-
-                        <span>Java</span>
-                        <span>OOP</span>
-                        <span>Data Structures</span>
-                        <span>Game Development</span>
-
-                    </div>
+                <div class="hero-buttons">
 
                     <a
-                        href="projects/java-game.html"
-                        class="project-button"
+                        href="#projects"
+                        class="button button-dark"
                     >
-                        View Project
-                        <span>→</span>
+                        Explore My Projects
+                        <span>↓</span>
+                    </a>
+
+
+                    <a
+                        href="documents/Smridhi-Subedi-Resume.pdf"
+                        target="_blank"
+                        class="button button-light"
+                    >
+                        View Resume ↗
+                    </a>
+
+
+                    <a
+                        href="documents/Smridhi-Subedi-Cover-Letter.pdf"
+                        target="_blank"
+                        class="button button-light"
+                    >
+                        Cover Letter ↗
                     </a>
 
                 </div>
 
-            </article>
+
+                <div class="hero-details">
+
+                    <div>
+                        <span>STUDYING</span>
+
+                        <strong>
+                            Computer Engineering
+                        </strong>
+                    </div>
 
 
-            <!-- LIGHT INSTRUMENT -->
+                    <div>
+                        <span>UNIVERSITY</span>
 
-            <article class="project-card">
+                        <strong>
+                            UT Dallas
+                        </strong>
+                    </div>
 
-                <div class="project-photo-wrapper">
 
-                    <img
-                        src="images/light-controlled-instrument/Light-Controlled-Instrument.png"
-                        alt="Light Controlled Instrument circuit in Tinkercad"
-                        class="project-card-image"
-                    >
+                    <div>
+                        <span>INTERESTS</span>
 
-                    <span class="project-type">
-                        EMBEDDED SYSTEMS
+                        <strong>
+                            Embedded • Hardware • Software
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT: TERMINAL -->
+
+            <div class="terminal">
+
+                <div class="terminal-topbar">
+
+                    <div class="terminal-dots">
+
+                        <span class="terminal-dot dot-pink"></span>
+                        <span class="terminal-dot dot-yellow"></span>
+                        <span class="terminal-dot dot-teal"></span>
+
+                    </div>
+
+
+                    <span class="terminal-title">
+                        smridhi@portfolio
                     </span>
 
                 </div>
 
 
-                <div class="project-card-content">
+                <div class="terminal-window">
 
-                    <p class="project-number">
-                        PROJECT 02
+                    <!-- WHOAMI -->
+
+                    <div class="terminal-block">
+
+                        <p class="terminal-command">
+                            <span class="terminal-prompt">
+                                smridhi@portfolio ~ %
+                            </span>
+                            whoami
+                        </p>
+
+                        <p class="terminal-output">
+                            Computer Engineering Student @ UT Dallas
+                        </p>
+
+                    </div>
+
+
+                    <!-- SKILLS -->
+
+                    <div class="terminal-block">
+
+                        <p class="terminal-command">
+                            <span class="terminal-prompt">
+                                smridhi@portfolio ~ %
+                            </span>
+                            skills
+                        </p>
+
+
+                        <div class="terminal-category">
+
+                            <p>
+                                embedded_hardware
+                            </p>
+
+                            <span>
+                                → Arduino Uno
+                            </span>
+
+                            <span>
+                                → Circuit Prototyping
+                            </span>
+
+                            <span>
+                                → Tinkercad Circuits
+                            </span>
+
+                            <span>
+                                → ORCAD PCB
+                            </span>
+
+                            <span>
+                                → MATLAB
+                            </span>
+
+                        </div>
+
+
+                        <div class="terminal-category">
+
+                            <p>
+                                languages
+                            </p>
+
+                            <span>
+                                → C++ • Python • Java
+                            </span>
+
+                            <span>
+                                → JavaScript • TypeScript
+                            </span>
+
+                            <span>
+                                → HTML • CSS
+                            </span>
+
+                            <span>
+                                → Assembly (MIPS/MARS)
+                            </span>
+
+                        </div>
+
+
+                        <div class="terminal-category">
+
+                            <p>
+                                tools
+                            </p>
+
+                            <span>
+                                → Git • VS Code • SolidWorks
+                            </span>
+
+                            <span>
+                                → Figma • Eclipse
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EXPERIENCE -->
+
+                    <div class="terminal-block">
+
+                        <p class="terminal-command">
+                            <span class="terminal-prompt">
+                                smridhi@portfolio ~ %
+                            </span>
+                            experience
+                        </p>
+
+
+                        <div class="terminal-job">
+
+                            <strong>
+                                → Micro Center
+                            </strong>
+
+                            <span>
+                                Sales Associate
+                            </span>
+
+                            <small>
+                                Jul 2024 – Oct 2024
+                            </small>
+
+                        </div>
+
+
+                        <div class="terminal-job">
+
+                            <strong>
+                                → Aspire2STEAM
+                            </strong>
+
+                            <span>
+                                Website Developer
+                            </span>
+
+                            <small>
+                                Jun 2024 – Aug 2024
+                            </small>
+
+                        </div>
+
+
+                        <div class="terminal-job">
+
+                            <strong>
+                                → iCode
+                            </strong>
+
+                            <span>
+                                Teach / Tech Lead
+                            </span>
+
+                            <small>
+                                Mar 2023 – Jul 2024
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FINAL PROMPT -->
+
+                    <p class="terminal-command final-command">
+
+                        <span class="terminal-prompt">
+                            smridhi@portfolio ~ %
+                        </span>
+
+                        <span class="cursor"></span>
+
                     </p>
+
+                </div>
+
+
+                <div class="terminal-footer">
+
+                    <span>
+                        &lt;/&gt; build
+                    </span>
+
+                    <span>
+                        ⚡ debug
+                    </span>
+
+                    <span>
+                        ✦ create
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <section
+            class="section about-section"
+            id="about"
+        >
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    01.
+                </span>
+
+                <h2>
+                    About
+                    <span>.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        I’m a Computer Engineering student who enjoys
+                        working at the intersection of hardware and
+                        software. I like understanding not only how
+                        something works in code, but how that code
+                        interacts with physical hardware.
+                    </p>
+
+
+                    <p>
+                        My projects have given me hands-on experience
+                        with embedded programming, circuit
+                        prototyping, analog sensor input, software
+                        development, debugging, and testing.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <p class="small-label">
+                        CURRENTLY INTERESTED IN
+                    </p>
+
+
+                    <div class="interest-list">
+
+                        <span>Embedded Systems</span>
+                        <span>Computer Architecture</span>
+                        <span>Digital Logic</span>
+                        <span>Electronics</span>
+                        <span>Hardware + Software</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             EDUCATION
+        ================================================== -->
+
+        <section
+            class="section compact-section"
+            id="education"
+        >
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    02.
+                </span>
+
+                <h2>
+                    Education
+                    <span>.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <div class="education-main">
+
+                    <div class="education-star">
+                        ✦
+                    </div>
+
+
+                    <div class="education-info">
+
+                        <div class="education-heading">
+
+                            <div>
+
+                                <h3>
+                                    University of Texas at Dallas
+                                </h3>
+
+                                <p>
+                                    B.S. Computer Engineering
+                                </p>
+
+                            </div>
+
+
+                            <span class="graduation">
+                                Summer/Fall 2027
+                            </span>
+
+                        </div>
+
+
+                        <span class="scholarship">
+                            Academic Excellence Scholarship
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="coursework">
+
+                    <p class="small-label">
+                        RELEVANT COURSEWORK
+                    </p>
+
+
+                    <div class="course-tags">
+
+                        <span>
+                            Embedded Design
+                        </span>
+
+                        <span>
+                            Computer Architecture
+                        </span>
+
+                        <span>
+                            Data Structures and Algorithms
+                        </span>
+
+                        <span>
+                            Operating Systems
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             EXPERIENCE
+        ================================================== -->
+
+        <section
+            class="section compact-section experience-section"
+            id="experience"
+        >
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    03.
+                </span>
+
+                <h2>
+                    Experience
+                    <span>.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="experience-list">
+
+                <!-- MICRO CENTER -->
+
+                <article class="experience-item">
+
+                    <div class="timeline">
+
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="experience-content">
+
+                        <div class="experience-heading">
+
+                            <div>
+
+                                <h3>
+                                    Sales Associate
+                                </h3>
+
+                                <p>
+                                    Micro Center
+                                </p>
+
+                            </div>
+
+
+                            <span>
+                                July 2024 – October 2024
+                            </span>
+
+                        </div>
+
+
+                        <p class="experience-description">
+                            Advised customers on PCs, 3D printers,
+                            accessories, and troubleshooting;
+                            matched recommendations to individual
+                            budget and use-case.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ASPIRE2STEAM -->
+
+                <article class="experience-item">
+
+                    <div class="timeline">
+
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="experience-content">
+
+                        <div class="experience-heading">
+
+                            <div>
+
+                                <h3>
+                                    Website Developer
+                                </h3>
+
+                                <p>
+                                    Aspire2STEAM
+                                </p>
+
+                            </div>
+
+
+                            <span>
+                                June 2024 – August 2024
+                            </span>
+
+                        </div>
+
+
+                        <p class="experience-description">
+                            Improved front-end UX and accessibility
+                            on a WordPress site for a women-in-STEM
+                            initiative using HTML, CSS, and
+                            JavaScript.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ICODE -->
+
+                <article class="experience-item">
+
+                    <div class="timeline">
+
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="experience-content">
+
+                        <div class="experience-heading">
+
+                            <div>
+
+                                <h3>
+                                    Teach / Tech Lead
+                                </h3>
+
+                                <p>
+                                    iCode
+                                </p>
+
+                            </div>
+
+
+                            <span>
+                                March 2023 – July 2024
+                            </span>
+
+                        </div>
+
+
+                        <p class="experience-description">
+                            Taught Python, Java, HTML, and robotics
+                            fundamentals to classes of up to 20
+                            students; guided hands-on projects and
+                            debugging sessions.
+                        </p>
+
+
+                        <p class="experience-description">
+                            Developed lesson materials and mini
+                            projects to reinforce OOP, loops,
+                            functions, and core engineering concepts.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
+
+        <section
+            class="projects-section"
+            id="projects"
+        >
+
+            <div class="projects-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        ✦ SELECTED WORK
+                    </p>
+
+
+                    <div class="section-title project-title">
+
+                        <span class="section-number">
+                            04.
+                        </span>
+
+                        <h2>
+                            Projects
+                            <span>.</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <p class="projects-description">
+                    A selection of projects across embedded
+                    systems, software development, and interactive
+                    design.
+                </p>
+
+            </div>
+
+
+            <!-- =============================================
+                 LIGHT CONTROLLED INSTRUMENT
+            ============================================== -->
+
+            <article class="featured-project project-card">
+
+                <a
+                    href="projects/light-controlled-instrument.html"
+                    class="featured-project-media"
+                >
+
+                    <img
+                        src="images/light-controlled-instrument/Light-Controlled-Instrument.png"
+                        alt="Light-Controlled Instrument project"
+                    >
+
+
+                    <span class="featured-label">
+                        FEATURED ✦
+                    </span>
+
+                </a>
+
+
+                <div class="featured-project-content">
+
+                    <div class="project-meta">
+
+                        <span>
+                            PROJECT 01
+                        </span>
+
+                        <span>
+                            EMBEDDED SYSTEMS
+                        </span>
+
+                    </div>
+
 
                     <h3>
                         Light-Controlled Instrument
                     </h3>
 
+
                     <p>
-                        Arduino-based instrument using a photoresistor,
-                        four switches, and four buzzers to transform
-                        real-time light readings into interactive sound.
+                        Built a sensor-driven instrument using a
+                        photoresistor (LDR), slide switches, and
+                        four buzzers; implemented four distinct
+                        sound modes triggered by light level
+                        thresholds and switch states.
                     </p>
 
-                    <div class="tags">
 
-                        <span>Arduino</span>
+                    <p>
+                        Converted real-time analog readings into
+                        pitch and tempo outputs using switch-gated
+                        and threshold-based logic across the full
+                        range of sensor input.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Arduino Uno</span>
                         <span>C/C++</span>
-                        <span>Analog Sensors</span>
-                        <span>Embedded</span>
+                        <span>Tinkercad</span>
 
                     </div>
+
 
                     <a
                         href="projects/light-controlled-instrument.html"
                         class="project-button"
                     >
-                        View Project
+                        Explore Project
                         <span>→</span>
                     </a>
 
@@ -649,290 +932,288 @@
             </article>
 
 
-            <!-- GROW YOUR TIME -->
+            <!-- =============================================
+                 SMALLER PROJECTS
+            ============================================== -->
 
-            <article class="project-card">
-
-                <div class="project-placeholder pink-placeholder">
-
-                    <span>
-                        Demo screenshots coming soon ♡
-                    </span>
-
-                </div>
+            <div class="project-grid">
 
 
-                <div class="project-card-content">
+                <!-- JAVA GAME -->
 
-                    <p class="project-number">
-                        PROJECT 03
-                    </p>
+                <article class="project-card small-project">
 
-                    <h3>
-                        WEhack 2025: GrowYourTime
-                    </h3>
+                    <a
+                        href="projects/java-game.html"
+                        class="small-project-media"
+                    >
 
-                    <p>
-                        Tamagotchi-style task and time-management
-                        game developed during WEhack 2025 with a
-                        focus on productive habits and interactive gameplay.
-                    </p>
+                        <video
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                        >
 
-                    <div class="tags">
+                            <source
+                                src="videos/Java-2D-Game.mp4"
+                                type="video/mp4"
+                            >
 
-                        <span>TypeScript</span>
-                        <span>Figma</span>
-                        <span>UI Design</span>
-                        <span>Hackathon</span>
+                        </video>
+
+                    </a>
+
+
+                    <div class="small-project-content">
+
+                        <div class="project-meta">
+
+                            <span>
+                                PROJECT 02
+                            </span>
+
+                            <span>
+                                SOFTWARE
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            2D Adventure Game
+                        </h3>
+
+
+                        <p>
+                            Built a Java 2D adventure RPG game,
+                            applying OOP principles and data
+                            structures to implement structured
+                            gameplay logic and custom features.
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span>Java</span>
+                            <span>OOP</span>
+                            <span>Data Structures</span>
+
+                        </div>
+
+
+                        <a
+                            href="projects/java-game.html"
+                            class="project-button"
+                        >
+                            Explore Project
+                            <span>→</span>
+                        </a>
 
                     </div>
 
-                    <a
-                        href="https://github.com/WEHACK-GROWYOURTIME/GrowYourTime"
-                        target="_blank"
-                        class="project-button"
+                </article>
+
+
+                <!-- GROW YOUR TIME -->
+
+                <article class="project-card small-project">
+
+                    <div class="grow-project-media">
+
+                        <div class="grow-icon">
+                            ✦
+                        </div>
+
+                        <strong>
+                            GrowYourTime
+                        </strong>
+
+                        <span>
+                            WEHack 2025
+                        </span>
+
+                    </div>
+
+
+                    <div class="small-project-content">
+
+                        <div class="project-meta">
+
+                            <span>
+                                PROJECT 03
+                            </span>
+
+                            <span>
+                                HACKATHON
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            WEHack 2025:
+                            GrowYourTime
+                        </h3>
+
+
+                        <p>
+                            Built a Tamagotchi-style task and time
+                            management game at a hackathon;
+                            designed the UI in Figma and implemented
+                            a functional prototype.
+                        </p>
+
+
+                        <p>
+                            Developed using TypeScript with a focus
+                            on encouraging users to build productive
+                            habits through interactive gameplay.
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span>TypeScript</span>
+                            <span>Figma</span>
+
+                        </div>
+
+
+                        <a
+                            href="https://github.com/WEHACK-GROWYOURTIME/GrowYourTime"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-button"
+                        >
+                            View GitHub
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+        <section
+            class="contact-section"
+            id="contact"
+        >
+
+            <div class="contact-card">
+
+                <span class="contact-star">
+                    ✦
+                </span>
+
+
+                <p class="eyebrow">
+                    ✦ LET'S CONNECT
+                </p>
+
+
+                <h2>
+                    Want to talk
+                    <span>engineering?</span>
+                </h2>
+
+
+                <p class="contact-description">
+                    I'm interested in engineering opportunities,
+                    technical projects, and connecting with people
+                    working across hardware and software.
+                </p>
+
+
+                <div class="contact-buttons">
+
+                    <button
+                        id="emailButton"
+                        class="button button-dark"
                     >
-                        GitHub Repository
-                        <span>↗</span>
+                        Email Me
+                    </button>
+
+
+                    <a
+                        href="https://linkedin.com/in/smridhi-subedi-8a55b8218"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button button-light"
+                    >
+                        LinkedIn ↗
+                    </a>
+
+
+                    <a
+                        href="https://github.com/smirsr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button button-light"
+                    >
+                        GitHub ↗
                     </a>
 
                 </div>
 
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- EXPERIENCE -->
-
-    <section id="experience">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                05.
-            </p>
-
-            <h2>
-                Experience
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <div class="timeline">
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-marker"></div>
-
-                <div class="timeline-content">
-
-                    <div class="experience-header">
-
-                        <div>
-
-                            <h3>
-                                Sales Associate
-                            </h3>
-
-                            <p class="company">
-                                Micro Center
-                            </p>
-
-                        </div>
-
-                        <span class="experience-date">
-                            Jul 2024 — Oct 2024
-                        </span>
-
-                    </div>
-
-                    <p>
-                        Advised customers on PCs, 3D printers,
-                        accessories, and troubleshooting while matching
-                        technology recommendations to individual needs
-                        and budgets.
-                    </p>
-
-                </div>
-
             </div>
 
+        </section>
 
-            <div class="timeline-item">
-
-                <div class="timeline-marker"></div>
-
-                <div class="timeline-content">
-
-                    <div class="experience-header">
-
-                        <div>
-
-                            <h3>
-                                Website Developer
-                            </h3>
-
-                            <p class="company">
-                                Aspire2STEAM
-                            </p>
-
-                        </div>
-
-                        <span class="experience-date">
-                            Jun 2024 — Aug 2024
-                        </span>
-
-                    </div>
-
-                    <p>
-                        Improved front-end user experience and
-                        accessibility on a WordPress website using
-                        HTML, CSS, and JavaScript.
-                    </p>
-
-                </div>
-
-            </div>
+    </main>
 
 
-            <div class="timeline-item">
-
-                <div class="timeline-marker"></div>
-
-                <div class="timeline-content">
-
-                    <div class="experience-header">
-
-                        <div>
-
-                            <h3>
-                                Teach / Tech Lead
-                            </h3>
-
-                            <p class="company">
-                                iCode
-                            </p>
-
-                        </div>
-
-                        <span class="experience-date">
-                            Mar 2023 — Jul 2024
-                        </span>
-
-                    </div>
-
-                    <p>
-                        Taught Python, Java, HTML, and robotics
-                        fundamentals while guiding students through
-                        hands-on projects and debugging.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-    
-
-
-    <!-- CONTACT -->
-
-    <section id="contact">
-
-        <div class="contact-card">
-
-            <p class="eyebrow">
-                ✦ LET'S CONNECT
-            </p>
-
-            <h2>
-                Want to talk engineering?
-            </h2>
-
-            <p>
-                I'm always interested in learning about new
-                engineering opportunities, projects, and teams.
-            </p>
-
-
-            <div class="contact-buttons">
-
-                <button
-                    class="button primary-button email-popup-button"
-                    id="emailPopupButton"
-                >
-                    Email Me
-                </button>
-
-
-                <a
-                    href="https://linkedin.com/in/smridhi-subedi-8a55b8218"
-                    target="_blank"
-                    class="button secondary-button"
-                >
-                    LinkedIn ↗
-                </a>
-
-
-                <a
-                    href="https://github.com/smirsr"
-                    target="_blank"
-                    class="button secondary-button"
-                >
-                    GitHub ↗
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer>
 
         <p>
-            Designed & built by
-            <span>Smridhi Subedi</span>
-            ✦ 2026
+            Designed &amp; built by
+            <strong>Smridhi Subedi</strong>
+            <span>✦</span>
+            2026
         </p>
 
     </footer>
 
 
-    <!-- EMAIL POPUP -->
+    <!-- =====================================================
+         EMAIL MODAL
+    ====================================================== -->
 
     <div
         class="email-modal-overlay"
         id="emailModal"
+        aria-hidden="true"
     >
 
-        <div class="email-modal">
+        <div
+            class="email-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="emailModalTitle"
+        >
 
             <button
-                class="email-modal-close"
-                id="emailModalClose"
-                aria-label="Close email popup"
+                class="email-close"
+                id="emailClose"
+                aria-label="Close"
             >
                 ×
             </button>
 
 
-            <div class="email-modal-icon">
+            <div class="email-icon">
                 ✉
             </div>
 
@@ -942,31 +1223,27 @@
             </p>
 
 
-            <h2>
-                Let's get in touch
-                <span class="accent-dot">.</span>
+            <h2 id="emailModalTitle">
+                Get in touch
+                <span>.</span>
             </h2>
 
 
-            <p class="email-modal-description">
-
-                Copy my email below and reach out about
-                engineering, projects, or opportunities.
-
+            <p>
+                Copy my email below and paste it into your
+                preferred email app.
             </p>
 
 
-            <div class="email-copy-box">
+            <div class="email-copy">
 
                 <span id="emailText">
                     smridhisubedi@yahoo.com
                 </span>
 
-                <button
-                    id="copyEmailButton"
-                    class="copy-email-button"
-                >
-                    Copy Email
+
+                <button id="copyEmailButton">
+                    Copy
                 </button>
 
             </div>
@@ -979,31 +1256,12 @@
                 ✓ Email copied!
             </p>
 
-
-            <div class="email-social-links">
-
-                <a
-                    href="https://linkedin.com/in/smridhi-subedi-8a55b8218"
-                    target="_blank"
-                >
-                    LinkedIn ↗
-                </a>
-
-                <a
-                    href="https://github.com/smirsr"
-                    target="_blank"
-                >
-                    GitHub ↗
-                </a>
-
-            </div>
-
         </div>
 
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 
