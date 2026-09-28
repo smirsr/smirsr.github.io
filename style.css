@@ -1878,134 +1878,322 @@ footer span {
 
 
 
-/* ==================================================
-   MOBILE
-================================================== */
+/* =========================================================
+   MOBILE NAVIGATION
+   KEEP THIS AT THE VERY BOTTOM OF style.css
+========================================================= */
 
-@media (max-width: 700px) {
+
+/* ---------------------------------------------------------
+   DESKTOP DEFAULT
+--------------------------------------------------------- */
+
+/* Hamburger is hidden on desktop */
+.menu-button {
+    display: none !important;
+
+    margin: 0;
+    padding: 8px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #fff7f3;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* Mobile drawer stays outside the screen by default */
+.mobile-menu {
+    position: fixed !important;
+
+    top: 0 !important;
+    right: -400px !important;
+
+    z-index: 9999 !important;
+
+    width: min(82vw, 350px) !important;
+
+    height: 100vh !important;
+    height: 100dvh !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    padding: 25px !important;
+
+    background: #211d1e !important;
+
+    border-left:
+        1px solid rgba(255, 255, 255, 0.08) !important;
+
+    box-shadow:
+        -20px 0 60px rgba(0, 0, 0, 0.35) !important;
+
+    overflow-y: auto !important;
+
+    transform: none !important;
+
+    transition:
+        right 0.35s ease !important;
+}
+
+
+/* JavaScript adds this class when hamburger is clicked */
+.mobile-menu.active {
+    right: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   DARK BACKGROUND OVERLAY
+--------------------------------------------------------- */
+
+.mobile-menu-overlay {
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    z-index: 9998 !important;
+
+    display: block !important;
+
+    background:
+        rgba(0, 0, 0, 0.58) !important;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+
+    pointer-events: none !important;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease !important;
+}
+
+
+/* JavaScript adds this when menu opens */
+.mobile-menu-overlay.active {
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    pointer-events: auto !important;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE MENU HEADER
+--------------------------------------------------------- */
+
+.mobile-menu-header {
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    width: 100% !important;
+
+    padding-bottom: 20px !important;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+
+.mobile-menu-title {
+    color: #ec8bd3 !important;
+
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+
+    letter-spacing: 0.5px !important;
+}
+
+
+/* X close button */
+.close-menu-button {
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 5px !important;
+
+    border: none !important;
+    outline: none !important;
+
+    background: transparent !important;
+
+    color: #fff7f3 !important;
+
+    font-size: 32px !important;
+    line-height: 1 !important;
+
+    cursor: pointer !important;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE LINKS
+--------------------------------------------------------- */
+
+.mobile-menu-links {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    width: 100% !important;
+
+    margin-top: 25px !important;
+}
+
+
+.mobile-menu-links a {
+    display: block !important;
+
+    width: 100% !important;
+
+    padding: 16px 5px !important;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.07) !important;
+
+    color: #fff7f3 !important;
+
+    text-decoration: none !important;
+
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease !important;
+}
+
+
+.mobile-menu-links a:hover {
+    padding-left: 10px !important;
+
+    color: #ec8bd3 !important;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE MENU BOTTOM
+--------------------------------------------------------- */
+
+.mobile-menu-bottom {
+    width: 100% !important;
+
+    margin-top: auto !important;
+
+    padding-top: 20px !important;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+
+.mobile-menu-bottom p {
+    margin: 0 0 5px !important;
+
+    color: #fff7f3 !important;
+
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+}
+
+
+.mobile-menu-bottom span {
+    color: #aaa1a4 !important;
+
+    font-size: 0.78rem !important;
+}
+
+
+/* =========================================================
+   TABLET + PHONE
+   Hamburger appears below 850px
+========================================================= */
+
+@media screen and (max-width: 850px) {
+
+    /* Hide desktop navigation links */
+    nav .nav-links {
+        display: none !important;
+    }
+
+
+    /* Show hamburger */
+    nav .menu-button {
+        display: block !important;
+
+        margin-left: auto !important;
+
+        padding: 8px !important;
+
+        border: none !important;
+
+        background: transparent !important;
+
+        color: #fff7f3 !important;
+
+        font-size: 28px !important;
+        line-height: 1 !important;
+
+        cursor: pointer !important;
+    }
+
+
+    /* Make sure nav stays horizontal */
+    nav {
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+@media screen and (max-width: 550px) {
 
     nav {
-
-        padding: 18px 7%;
-
+        padding-left: 20px !important;
+        padding-right: 20px !important;
     }
 
 
-    .nav-links {
-
-        display: none;
-
+    .nav-name {
+        font-size: 1rem !important;
     }
 
 
-    .hero {
+    .mobile-menu {
+        width: 82vw !important;
 
-        min-height: auto;
+        max-width: 330px !important;
 
-        padding: 90px 7%;
-
+        padding: 22px !important;
     }
 
 
-    .hero h1 {
-
-        letter-spacing: -2px;
-
-    }
-
-
-    .hero-description {
-
-        font-size: 16px;
-
-    }
-
-
-    .quick-info {
-
-        flex-direction: column;
-
-        gap: 18px;
-
-    }
-
-
-    .hero-buttons {
-
-        align-items: flex-start;
-
-    }
-
-
-    .button {
-
-        width: 100%;
-
-    }
-
-
-    .floating-label {
-
-        display: none;
-
-    }
-
-
-    section {
-
-        padding: 80px 7%;
-
-    }
-
-
-    .section-heading {
-
-        align-items: flex-start;
-
-    }
-
-
-    .experience-header {
-
-        flex-direction: column;
-
-        gap: 5px;
-
-    }
-
-
-    .contact-card {
-
-        padding: 40px 22px;
-
-    }
-
-
-    .contact-buttons {
-
-        flex-direction: column;
-
-    }
-
-
-    .screenshot-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .project-page-hero {
-
-        padding: 80px 7% 45px;
-
-    }
-
-
-    .project-section {
-
-        padding: 60px 7%;
-
+    .mobile-menu-links a {
+        padding:
+            15px
+            5px !important;
     }
 
 }
