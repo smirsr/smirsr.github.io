@@ -1,430 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =========================================================
+   JAVA GAME — SCREENSHOTS
+========================================================= */
 
-<head>
+.game-screenshot-feature {
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 14px;
 
-    <meta charset="UTF-8">
+    border: 1px solid rgba(255, 247, 239, 0.15);
+    border-radius: 22px;
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    background: rgba(255, 247, 239, 0.055);
+}
 
-    <title>
-        2D Adventure Game | Smridhi Subedi
-    </title>
+.game-screenshot-feature img {
+    width: 100%;
+    max-height: 580px;
+    display: block;
 
-    <link rel="stylesheet" href="../css/global.css">
-<link rel="stylesheet" href="../css/projects.css">
+    object-fit: cover;
+    border-radius: 14px;
+}
 
-</head>
+.game-screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
 
+.game-screenshot-grid img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
 
-<body>
+    display: block;
+    object-fit: cover;
 
+    padding: 9px;
 
-    <div class="background-decoration decoration-one"></div>
-    <div class="background-decoration decoration-two"></div>
+    border: 1px solid rgba(255, 247, 239, 0.15);
+    border-radius: 19px;
 
+    background: rgba(255, 247, 239, 0.055);
+}
 
-    <!-- NAVIGATION -->
 
-    <nav>
+/* =========================================================
+   JAVA GAME — DEVELOPMENT
+========================================================= */
 
-        <a
-            href="../index.html"
-            class="nav-name"
-        >
-            Smridhi Subedi
-        </a>
+.development-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.75fr);
+    gap: 70px;
+    align-items: start;
+}
 
+.development-main h3 {
+    max-width: 580px;
+    margin: 10px 0 20px;
 
-        <div class="nav-links">
+    color: var(--cream);
 
-            <a href="../index.html">
-                Home
-            </a>
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
 
-            <a href="../index.html#projects">
-                Projects
-            </a>
+.development-main > p:not(.eyebrow) {
+    max-width: 600px;
+    margin: 0 0 15px;
 
-            <a href="../index.html#contact">
-                Contact
-            </a>
+    color: var(--light-text-soft);
 
-        </div>
+    font-size: 0.79rem;
+    line-height: 1.75;
+}
 
+.development-details {
+    border-top: 1px solid var(--border-light);
+}
 
-        <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="Open navigation menu"
-        >
-            ☰
-        </button>
+.development-details div {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    gap: 12px;
 
-    </nav>
+    padding: 17px 0;
 
+    border-bottom: 1px solid var(--border-light);
+}
 
-    <!-- MOBILE MENU -->
+.development-details span {
+    color: var(--pink);
 
-    <div
-        class="mobile-menu-overlay"
-        id="mobileMenuOverlay"
-    ></div>
+    font-size: 0.57rem;
+    font-weight: 900;
+}
 
+.development-details p {
+    margin: 0;
 
-    <aside
-        class="mobile-menu"
-        id="mobileMenu"
-    >
+    color: var(--cream);
 
-        <div class="mobile-menu-header">
+    font-size: 0.72rem;
+    line-height: 1.55;
+}
 
-            <span class="mobile-menu-title">
-                Navigate ✦
-            </span>
+.takeaway-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-            <button
-                class="close-menu-button"
-                id="closeMenuButton"
-            >
-                ×
-            </button>
 
-        </div>
+/* =========================================================
+   JAVA RESPONSIVE
+========================================================= */
 
+@media (max-width: 950px) {
 
-        <div class="mobile-menu-links">
+    .development-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
 
-            <a href="../index.html">Home</a>
-            <a href="../index.html#about">About</a>
-            <a href="../index.html#projects">Projects</a>
-            <a href="../index.html#experience">Experience</a>
-            <a href="../index.html#skills">Skills</a>
-            <a href="../index.html#contact">Contact</a>
+}
 
-        </div>
 
+@media (max-width: 650px) {
 
-        <div class="mobile-menu-bottom">
+    .game-screenshot-grid {
+        grid-template-columns: 1fr;
+    }
 
-            <p>Computer Engineering</p>
+    .game-screenshot-grid img {
+        min-height: 0;
+    }
 
-            <span>
-                Embedded • Hardware • Software
-            </span>
+    .takeaway-buttons {
+        flex-direction: column;
+    }
 
-        </div>
+    .takeaway-buttons .button {
+        width: 100%;
+    }
 
-    </aside>
-
-
-    <!-- PROJECT HERO -->
-
-    <header class="project-page-hero">
-
-        <p class="eyebrow">
-            ✦ SOFTWARE PROJECT
-        </p>
-
-
-        <h1>
-            2D Adventure
-            <span class="pink-text">
-                Game
-            </span>
-        </h1>
-
-
-        <p class="project-page-description">
-
-            A Java-based 2D adventure RPG built while applying
-            object-oriented programming, data structures,
-            multi-class program organization, and structured
-            gameplay logic.
-
-        </p>
-
-
-        <div class="tags">
-
-            <span>Java</span>
-            <span>Object-Oriented Programming</span>
-            <span>Data Structures</span>
-            <span>Game Development</span>
-
-        </div>
-
-
-        <div class="hero-buttons">
-
-            <a
-                href="https://github.com/smirsr/Java-Adventure-Game"
-                target="_blank"
-                class="button primary-button"
-            >
-                View Source Code ↗
-            </a>
-
-
-            <a
-                href="../index.html#projects"
-                class="button secondary-button"
-            >
-                ← Back to Projects
-            </a>
-
-        </div>
-
-    </header>
-
-
-    <!-- OVERVIEW -->
-
-    <section class="project-section">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                01.
-            </p>
-
-            <h2>
-                Project Overview
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <p>
-            This project is a 2D adventure game developed in Java.
-            I used object-oriented programming and separate Java
-            classes to organize the application and implement
-            structured gameplay behavior.
-        </p>
-
-
-        <p>
-            Building the project gave me experience working with
-            a larger Java codebase rather than isolated programming
-            exercises and helped reinforce how multiple classes
-            interact within one application.
-        </p>
-
-    </section>
-
-
-    <!-- DEMO -->
-
-    <section class="project-section">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                02.
-            </p>
-
-            <h2>
-                Gameplay Demo
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <p>
-            A short screen recording showing the game running.
-        </p>
-
-
-        <video
-            class="project-video"
-            controls
-            preload="metadata"
-        >
-
-            <source
-                src="../videos/Java-2D-Game.mp4"
-                type="video/mp4"
-            >
-
-            Your browser does not support HTML video.
-
-        </video>
-
-    </section>
-
-
-    <!-- SCREENSHOTS -->
-
-    <section class="project-section">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                03.
-            </p>
-
-            <h2>
-                Screenshots
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <div class="screenshot-grid">
-
-            <img
-                src="../images/java-game/Java-Game-1.jpeg"
-                alt="Java adventure game screenshot one"
-            >
-
-            <img
-                src="../images/java-game/Java-Game-2.jpeg"
-                alt="Java adventure game screenshot two"
-            >
-
-            <img
-                src="../images/java-game/Java-Game-3.jpeg"
-                alt="Java adventure game screenshot three"
-            >
-
-        </div>
-
-    </section>
-
-
-    <!-- TECHNICAL DETAILS -->
-
-    <section class="project-section">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                04.
-            </p>
-
-            <h2>
-                Technical Details
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <div class="project-details-grid">
-
-
-            <div class="detail-card">
-
-                <h3>
-                    Language
-                </h3>
-
-                <p>
-                    Java
-                </p>
-
-            </div>
-
-
-            <div class="detail-card">
-
-                <h3>
-                    Concepts
-                </h3>
-
-                <p>
-                    Object-oriented programming,
-                    classes, methods, data structures,
-                    and multi-file application design.
-                </p>
-
-            </div>
-
-
-            <div class="detail-card">
-
-                <h3>
-                    Development
-                </h3>
-
-                <p>
-                    Built and tested as a multi-class
-                    Java application.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- LEARNING -->
-
-    <section class="project-section">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                05.
-            </p>
-
-            <h2>
-                What I Learned
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <p>
-            This project helped me become more comfortable
-            organizing a larger Java program and understanding
-            how multiple classes work together within one system.
-        </p>
-
-
-        <p>
-            I also gained additional experience debugging,
-            navigating project structure, and applying
-            object-oriented programming to a visual application.
-        </p>
-
-
-        <div class="hero-buttons">
-
-            <a
-                href="https://github.com/smirsr/Java-Adventure-Game"
-                target="_blank"
-                class="button primary-button"
-            >
-                Explore the Code ↗
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <footer>
-
-        <p>
-            Designed & built by
-            <span>Smridhi Subedi</span>
-            ✦ 2026
-        </p>
-
-    </footer>
-
-
-    <script src="../script.js"></script>
-
-</body>
-
-</html>
+}

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -10,43 +9,140 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Light-Controlled Instrument | Smridhi Subedi
-    </title>
+    <meta
+        name="description"
+        content="Light-Controlled Instrument embedded systems project by Smridhi Subedi."
+    >
 
-    <link rel="stylesheet" href="../css/global.css">
-<link rel="stylesheet" href="../css/projects.css">
+    <title>Light-Controlled Instrument | Smridhi Subedi</title>
 
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/projects.css"
+    >
 </head>
 
 
-<body>
+<body class="project-page">
+
+    <!-- =====================================================
+         BACKGROUND DECORATION
+    ====================================================== -->
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+    <div class="background-shape shape-three"></div>
 
 
-    <div class="background-decoration decoration-one"></div>
-    <div class="background-decoration decoration-two"></div>
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-inner">
+
+            <a
+                href="../index.html"
+                class="nav-logo"
+            >
+                Smridhi Subedi<span>✦</span>
+            </a>
 
 
-    <!-- NAVIGATION -->
+            <div class="desktop-nav">
 
-    <nav>
+                <a href="../index.html">
+                    Home
+                </a>
 
-        <a
-            href="../index.html"
-            class="nav-name"
-        >
-            Smridhi Subedi
-        </a>
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </div>
 
 
-        <div class="nav-links">
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MOBILE OVERLAY -->
+
+    <div
+        class="mobile-overlay"
+        id="mobileOverlay"
+    ></div>
+
+
+    <!-- MOBILE MENU -->
+
+    <aside
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true"
+    >
+
+        <div class="mobile-menu-header">
+
+            <a
+                href="../index.html"
+                class="nav-logo"
+            >
+                Smridhi Subedi<span>✦</span>
+            </a>
+
+
+            <button
+                class="close-menu-button"
+                id="closeMenuButton"
+                aria-label="Close navigation menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="mobile-links">
 
             <a href="../index.html">
                 Home
             </a>
 
+            <a href="../index.html#about">
+                About
+            </a>
+
             <a href="../index.html#projects">
                 Projects
+            </a>
+
+            <a href="../index.html#experience">
+                Experience
+            </a>
+
+            <a href="../index.html#skills">
+                Skills
             </a>
 
             <a href="../index.html#contact">
@@ -56,755 +152,605 @@
         </div>
 
 
-        <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="Open navigation menu"
-        >
-            ☰
-        </button>
-
-    </nav>
-
-
-    <!-- MOBILE MENU -->
-
-    <div
-        class="mobile-menu-overlay"
-        id="mobileMenuOverlay"
-    ></div>
-
-
-    <aside
-        class="mobile-menu"
-        id="mobileMenu"
-    >
-
-        <div class="mobile-menu-header">
-
-            <span class="mobile-menu-title">
-                Navigate ✦
-            </span>
-
-            <button
-                class="close-menu-button"
-                id="closeMenuButton"
-            >
-                ×
-            </button>
-
-        </div>
-
-
-        <div class="mobile-menu-links">
-
-            <a href="../index.html">Home</a>
-            <a href="../index.html#about">About</a>
-            <a href="../index.html#projects">Projects</a>
-            <a href="../index.html#experience">Experience</a>
-            <a href="../index.html#skills">Skills</a>
-            <a href="../index.html#contact">Contact</a>
-
-        </div>
-
-
-        <div class="mobile-menu-bottom">
-
-            <p>
-                Computer Engineering
-            </p>
-
-            <span>
-                Embedded • Hardware • Software
-            </span>
-
+        <div class="mobile-menu-footer">
+            Computer Engineering · UTD
         </div>
 
     </aside>
 
 
-    <!-- HERO -->
+    <!-- =====================================================
+         PROJECT HERO
+    ====================================================== -->
 
-    <header class="project-page-hero">
+    <header class="project-hero">
 
-        <p class="eyebrow">
-            ✦ EMBEDDED SYSTEMS PROJECT
-        </p>
+        <div class="project-hero-copy">
 
-
-        <h1>
-            Light-Controlled
-            <span class="pink-text">
-                Instrument
-            </span>
-        </h1>
+            <p class="eyebrow">
+                ✦ EMBEDDED SYSTEMS PROJECT
+            </p>
 
 
-        <p class="project-page-description">
-
-            An Arduino-based interactive instrument that transforms
-            real-time light sensor readings into sound using analog
-            input processing, threshold logic, switch control,
-            variable pitch, and variable beat timing.
-
-        </p>
+            <h1>
+                Light-Controlled
+                <span>Instrument</span>
+            </h1>
 
 
-        <div class="tags">
+            <p class="project-hero-description">
+                An interactive Arduino instrument that uses
+                real-time light readings to control pitch,
+                rhythm, and light-triggered sound.
+            </p>
 
-            <span>Arduino Uno</span>
-            <span>C/C++</span>
-            <span>Analog Sensors</span>
-            <span>Embedded Systems</span>
+
+            <div class="project-tags">
+
+                <span>Arduino Uno</span>
+                <span>C/C++</span>
+                <span>Analog Sensors</span>
+                <span>Embedded Systems</span>
+
+            </div>
+
+
+            <div class="project-hero-buttons">
+
+                <a
+                    href="#demo"
+                    class="button button-yellow"
+                >
+                    View Demo ↓
+                </a>
+
+                <a
+                    href="../index.html#projects"
+                    class="button button-outline"
+                >
+                    ← Back to Projects
+                </a>
+
+            </div>
+
+
+            <div class="project-quick-info">
+
+                <div>
+                    <span>INPUT</span>
+                    <strong>Photoresistor</strong>
+                </div>
+
+                <div>
+                    <span>PROCESSOR</span>
+                    <strong>Arduino Uno</strong>
+                </div>
+
+                <div>
+                    <span>OUTPUT</span>
+                    <strong>4 Buzzers</strong>
+                </div>
+
+            </div>
 
         </div>
 
 
-        <div class="hero-buttons">
+        <div class="project-hero-visual">
 
-            <a
-                href="../index.html#projects"
-                class="button secondary-button"
-            >
-                ← Back to Projects
-            </a>
+            <div class="project-hero-image">
+
+                <img
+                    src="../images/light-controlled-instrument/Light-Controlled-Instrument.png"
+                    alt="Light-Controlled Instrument circuit"
+                >
+
+            </div>
+
+
+            <div class="project-visual-caption">
+
+                <span>01</span>
+
+                <p>
+                    Light becomes the control input for
+                    multiple sound behaviors.
+                </p>
+
+            </div>
 
         </div>
 
     </header>
 
 
-    <!-- PROJECT OVERVIEW -->
-
-    <section class="project-section">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                01.
-            </p>
-
-            <h2>
-                Project Overview
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
+    <main>
 
 
-        <p>
-            The Light-Controlled Instrument is an embedded system
-            built around an Arduino Uno that uses environmental
-            light as an interactive input for generating sound.
-        </p>
+        <!-- =====================================================
+             01 — DEMO
+        ====================================================== -->
 
-
-        <p>
-            A photoresistor continuously measures light intensity
-            through analog pin A0. The Arduino processes that
-            reading while also monitoring four slide switches that
-            independently control four buzzer functions.
-        </p>
-
-
-        <p>
-            Light can control pitch, control beat speed, or trigger
-            dedicated low-light and high-light sounds. Because each
-            function has its own switch, several sound behaviors can
-            operate together.
-        </p>
-
-    </section>
-
-    <!-- =========================
-     02. VIDEO DEMO
-========================== -->
-
-<section class="project-section">
-
-    <div class="section-heading">
-
-        <p class="section-number">
-            02.
-        </p>
-
-        <h2>
-            Project Demo
-            <span class="accent-dot">.</span>
-        </h2>
-
-    </div>
-
-    <p>
-        A short walkthrough of the Light-Controlled Instrument,
-        including the circuit setup, light sensor behavior,
-        switch controls, and sound outputs.
-    </p>
-
-    <video
-        class="project-video"
-        controls
-        preload="metadata"
-    >
-
-        <source
-            src="../videos/Light-Controlled-Instrument.mp4"
-            type="video/mp4"
+        <section
+            class="project-section"
+            id="demo"
         >
 
-        Your browser does not support HTML video.
+            <div class="project-section-heading">
 
-    </video>
+                <div>
 
-</section>
+                    <p class="project-section-number">
+                        01
+                    </p>
 
-    <!-- CIRCUIT -->
+                    <h2>
+                        Project Demo<span>.</span>
+                    </h2>
 
-    <section class="project-section">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                02.
-            </p>
-
-            <h2>
-                Circuit Design
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
+                </div>
 
 
-        <p>
-            The circuit combines an Arduino Uno, a photoresistor,
-            four slide switches, and four buzzers. The photoresistor
-            provides the changing analog input while each switch
-            independently enables one audio behavior.
-        </p>
-
-
-        <div class="single-project-image">
-
-            <img
-                src="../images/light-controlled-instrument/Light-Controlled-Instrument.png"
-                alt="Tinkercad circuit for the Light-Controlled Instrument"
-            >
-
-        </div>
-
-    </section>
-
-
-
-    <!-- HARDWARE + SOFTWARE -->
-
-    <section class="project-section">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                04.
-            </p>
-
-            <h2>
-                Hardware + Software
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <div class="project-details-grid">
-
-
-            <div class="detail-card">
-
-                <h3>
-                    Arduino Uno
-                </h3>
-
-                <p>
-                    Central controller responsible for reading
-                    inputs and controlling the four sound outputs.
+                <p class="project-section-intro">
+                    The instrument responds continuously as the
+                    amount of light reaching the photoresistor changes.
                 </p>
 
             </div>
 
 
-            <div class="detail-card">
+            <div class="project-video-frame">
 
-                <h3>
-                    Photoresistor
-                </h3>
+                <video
+                    class="project-video"
+                    controls
+                    preload="metadata"
+                >
+                    <source
+                        src="../videos/Light-Controlled-Instrument.mp4"
+                        type="video/mp4"
+                    >
 
-                <p>
-                    Connected to analog input A0 and used to
-                    continuously measure changing light levels.
-                </p>
-
-            </div>
-
-
-            <div class="detail-card">
-
-                <h3>
-                    Four Switches
-                </h3>
-
-                <p>
-                    Independently enable the main pitch, beat,
-                    low-light, and high-light sound functions.
-                </p>
+                    Your browser does not support the video tag.
+                </video>
 
             </div>
 
-
-            <div class="detail-card">
-
-                <h3>
-                    Four Buzzers
-                </h3>
-
-                <p>
-                    Separate outputs provide the main sound,
-                    beat, low-light alert, and high-light alert.
-                </p>
-
-            </div>
+        </section>
 
 
-            <div class="detail-card">
+        <!-- =====================================================
+             02 — THE BUILD
+        ====================================================== -->
 
-                <h3>
-                    C / C++
-                </h3>
+        <section class="project-section">
 
-                <p>
-                    Controls analog mapping, digital inputs,
-                    thresholds, frequency, timing, and output logic.
-                </p>
+            <div class="project-section-heading">
 
-            </div>
+                <div>
 
+                    <p class="project-section-number">
+                        02
+                    </p>
 
-            <div class="detail-card">
-
-                <h3>
-                    Tinkercad
-                </h3>
-
-                <p>
-                    Used to prototype and test the embedded
-                    circuit design.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTROL LOGIC -->
-
-    <section class="project-section">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                05.
-            </p>
-
-            <h2>
-                Control Logic
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <p>
-            Each pass through the main loop reads the photoresistor
-            and the four switches. The switches use INPUT_PULLUP,
-            meaning a LOW digital reading represents an enabled
-            sound function.
-        </p>
-
-
-        <div class="logic-box">
-
-            <div class="logic-line">
-                <span>01</span>
-                Read the photoresistor using analogRead(A0)
-            </div>
-
-            <div class="logic-line">
-                <span>02</span>
-                Read all four INPUT_PULLUP switch states
-            </div>
-
-            <div class="logic-line">
-                <span>03</span>
-                Map light input into a 300–2000 Hz pitch range
-            </div>
-
-            <div class="logic-line">
-                <span>04</span>
-                Map light input into a 200–600 ms beat interval
-            </div>
-
-            <div class="logic-line">
-                <span>05</span>
-                Compare the sensor value against the threshold of 500
-            </div>
-
-            <div class="logic-line">
-                <span>06</span>
-                Update each enabled buzzer
-            </div>
-
-        </div>
-
-
-        <div class="technical-highlight">
-
-            <p class="mini-title">
-                ✦ NON-BLOCKING TIMING
-            </p>
-
-            <h3>
-                Beat Timing with millis()
-            </h3>
-
-            <p>
-                The beat output uses millis() and stores the time
-                of the previous state change. Once the required
-                interval has passed, the beat state toggles between
-                ON and OFF.
-            </p>
-
-            <p>
-                This avoids using a long blocking delay for the
-                rhythm, allowing the program to continue reading
-                the light sensor and switches while the beat runs.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- SOUND CONTROLS -->
-
-    <section class="project-section">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                06.
-            </p>
-
-            <h2>
-                Sound Controls
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <p>
-            The four sound functions are independently enabled,
-            meaning the user can combine multiple sound behaviors
-            rather than selecting only one mode at a time.
-        </p>
-
-
-        <div class="mode-grid">
-
-
-            <div class="mode-card">
-
-                <span class="mode-number">
-                    SOUND 01
-                </span>
-
-                <h3>
-                    Light-Controlled Pitch
-                </h3>
-
-                <p>
-                    The main buzzer continuously changes frequency
-                    according to the photoresistor reading.
-                </p>
-
-                <div class="mode-behavior">
-
-                    Dark → Higher Pitch
-                    <br>
-                    Bright → Lower Pitch
-                    <br>
-                    Range: 300–2000 Hz
+                    <h2>
+                        The Build<span>.</span>
+                    </h2>
 
                 </div>
 
             </div>
 
 
-            <div class="mode-card">
+            <div class="build-layout">
 
-                <span class="mode-number">
-                    SOUND 02
-                </span>
+                <div class="build-image">
 
-                <h3>
-                    Light-Controlled Beat
-                </h3>
+                    <img
+                        src="../images/light-controlled-instrument/Light-Controlled-Instrument.png"
+                        alt="Arduino Light-Controlled Instrument circuit design"
+                    >
 
-                <p>
-                    The beat buzzer repeatedly switches between
-                    ON and OFF. Light determines how quickly
-                    the state changes.
+                </div>
+
+
+                <div class="build-copy">
+
+                    <p class="build-lead">
+                        One analog input controls four independent
+                        sound behaviors.
+                    </p>
+
+
+                    <p>
+                        A photoresistor connected to analog pin A0
+                        continuously measures environmental light.
+                        The Arduino converts that reading into values
+                        that can control sound in real time.
+                    </p>
+
+
+                    <p>
+                        Four slide switches independently enable the
+                        instrument's four buzzer modes, allowing
+                        multiple behaviors to operate together instead
+                        of limiting the system to one fixed output.
+                    </p>
+
+
+                    <div class="build-components">
+
+                        <div>
+                            <span>01</span>
+                            <p>Arduino Uno</p>
+                        </div>
+
+                        <div>
+                            <span>02</span>
+                            <p>Photoresistor</p>
+                        </div>
+
+                        <div>
+                            <span>03</span>
+                            <p>4 Slide Switches</p>
+                        </div>
+
+                        <div>
+                            <span>04</span>
+                            <p>4 Buzzers</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             03 — HOW IT WORKS
+        ====================================================== -->
+
+        <section class="project-section">
+
+            <div class="project-section-heading">
+
+                <div>
+
+                    <p class="project-section-number">
+                        03
+                    </p>
+
+                    <h2>
+                        How It Works<span>.</span>
+                    </h2>
+
+                </div>
+
+
+                <p class="project-section-intro">
+                    Each switch activates a different relationship
+                    between the sensor reading and sound output.
                 </p>
 
-                <div class="mode-behavior">
+            </div>
 
-                    Dark → Slower Beat
-                    <br>
-                    Bright → Faster Beat
-                    <br>
-                    Interval: 200–600 ms
+
+            <div class="sound-mode-grid">
+
+
+                <!-- MODE 1 -->
+
+                <article class="sound-mode-card">
+
+                    <div class="sound-mode-top">
+
+                        <span class="sound-number">
+                            01
+                        </span>
+
+                        <span class="sound-type">
+                            CONTINUOUS
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Light → Pitch
+                    </h3>
+
+
+                    <p>
+                        Light intensity is mapped to a changing
+                        buzzer frequency.
+                    </p>
+
+
+                    <div class="sound-value">
+                        300–2000
+                        <span>Hz</span>
+                    </div>
+
+                </article>
+
+
+                <!-- MODE 2 -->
+
+                <article class="sound-mode-card">
+
+                    <div class="sound-mode-top">
+
+                        <span class="sound-number">
+                            02
+                        </span>
+
+                        <span class="sound-type">
+                            RHYTHM
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Light → Beat
+                    </h3>
+
+
+                    <p>
+                        The sensor reading changes the timing
+                        between repeating buzzer pulses.
+                    </p>
+
+
+                    <div class="sound-value">
+                        200–600
+                        <span>ms</span>
+                    </div>
+
+                </article>
+
+
+                <!-- MODE 3 -->
+
+                <article class="sound-mode-card">
+
+                    <div class="sound-mode-top">
+
+                        <span class="sound-number">
+                            03
+                        </span>
+
+                        <span class="sound-type">
+                            THRESHOLD
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Low-Light Trigger
+                    </h3>
+
+
+                    <p>
+                        A dedicated buzzer activates when the
+                        light reading drops below the threshold.
+                    </p>
+
+
+                    <div class="sound-condition">
+                        sensor &lt; 500
+                    </div>
+
+                </article>
+
+
+                <!-- MODE 4 -->
+
+                <article class="sound-mode-card">
+
+                    <div class="sound-mode-top">
+
+                        <span class="sound-number">
+                            04
+                        </span>
+
+                        <span class="sound-type">
+                            THRESHOLD
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        High-Light Trigger
+                    </h3>
+
+
+                    <p>
+                        A separate buzzer activates when the
+                        light reading rises above the threshold.
+                    </p>
+
+
+                    <div class="sound-condition">
+                        sensor &gt; 500
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             04 — ENGINEERING HIGHLIGHTS
+        ====================================================== -->
+
+        <section class="project-section">
+
+            <div class="project-section-heading">
+
+                <div>
+
+                    <p class="project-section-number">
+                        04
+                    </p>
+
+                    <h2>
+                        Engineering Highlights<span>.</span>
+                    </h2>
 
                 </div>
 
             </div>
 
 
-            <div class="mode-card">
+            <div class="engineering-grid">
 
-                <span class="mode-number">
-                    SOUND 03
-                </span>
 
-                <h3>
-                    Low-Light Trigger
-                </h3>
+                <article class="engineering-card">
 
-                <p>
-                    When enabled, the dedicated low-light buzzer
-                    activates whenever the sensor value falls
-                    below 500.
-                </p>
+                    <span class="engineering-icon">
+                        01
+                    </span>
 
-                <div class="mode-behavior">
+                    <h3>
+                        Analog Sensing
+                    </h3>
 
-                    Sensor &lt; 500 → ON
-                    <br>
-                    Sensor ≥ 500 → OFF
+                    <p>
+                        The photoresistor is sampled through A0
+                        using the Arduino's 0–1023 analog input range.
+                    </p>
 
-                </div>
+                </article>
+
+
+                <article class="engineering-card">
+
+                    <span class="engineering-icon">
+                        02
+                    </span>
+
+                    <h3>
+                        Real-Time Mapping
+                    </h3>
+
+                    <p>
+                        Sensor values are converted into usable
+                        frequency and timing ranges for sound output.
+                    </p>
+
+                </article>
+
+
+                <article class="engineering-card">
+
+                    <span class="engineering-icon">
+                        03
+                    </span>
+
+                    <h3>
+                        Independent Controls
+                    </h3>
+
+                    <p>
+                        Four INPUT_PULLUP switches independently
+                        enable each sound behavior.
+                    </p>
+
+                </article>
+
+
+                <article class="engineering-card">
+
+                    <span class="engineering-icon">
+                        04
+                    </span>
+
+                    <h3>
+                        Non-Blocking Timing
+                    </h3>
+
+                    <p>
+                        The beat uses millis() timing so the system
+                        can continue reading the sensor and switches
+                        while rhythm generation is active.
+                    </p>
+
+                </article>
+
 
             </div>
 
+        </section>
 
-            <div class="mode-card">
 
-                <span class="mode-number">
-                    SOUND 04
-                </span>
+        <!-- =====================================================
+             05 — TAKEAWAYS
+        ====================================================== -->
 
-                <h3>
-                    High-Light Trigger
-                </h3>
+        <section class="project-section project-takeaway">
 
-                <p>
-                    When enabled, the dedicated high-light buzzer
-                    activates whenever the sensor value rises
-                    above 500.
-                </p>
-
-                <div class="mode-behavior">
-
-                    Sensor &gt; 500 → ON
-                    <br>
-                    Sensor ≤ 500 → OFF
-
-                </div>
-
+            <div class="takeaway-number">
+                05
             </div>
 
 
-        </div>
+            <div class="takeaway-content">
 
-    </section>
-
-
-    <!-- TECHNICAL DETAILS -->
-
-    <section class="project-section">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                07.
-            </p>
-
-            <h2>
-                Technical Details
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
+                <p class="eyebrow">
+                    PROJECT TAKEAWAYS
+                </p>
 
 
-        <div class="project-details-grid">
+                <h2>
+                    Turning sensor data into
+                    <span>real-time behavior.</span>
+                </h2>
 
-
-            <div class="detail-card">
-
-                <h3>
-                    Analog Input
-                </h3>
 
                 <p>
-                    Photoresistor values are read across the
-                    Arduino's 0–1023 analog range.
+                    This project gave me hands-on experience connecting
+                    analog sensing, digital controls, and sound output
+                    in one embedded system. The most important part was
+                    designing the program so changing sensor data and
+                    multiple switch inputs could be processed
+                    continuously without interrupting one another.
                 </p>
+
+
+                <a
+                    href="../index.html#projects"
+                    class="button button-yellow"
+                >
+                    ← Explore More Projects
+                </a>
 
             </div>
 
-
-            <div class="detail-card">
-
-                <h3>
-                    Pitch Mapping
-                </h3>
-
-                <p>
-                    Sensor values are mapped inversely from
-                    2000 Hz to 300 Hz.
-                </p>
-
-            </div>
+        </section>
 
 
-            <div class="detail-card">
-
-                <h3>
-                    Beat Mapping
-                </h3>
-
-                <p>
-                    Sensor values are mapped from a 600 ms
-                    interval to a 200 ms interval.
-                </p>
-
-            </div>
+    </main>
 
 
-            <div class="detail-card">
-
-                <h3>
-                    Threshold
-                </h3>
-
-                <p>
-                    500 separates the low-light and
-                    high-light trigger regions.
-                </p>
-
-            </div>
-
-
-            <div class="detail-card">
-
-                <h3>
-                    Switch Inputs
-                </h3>
-
-                <p>
-                    Four INPUT_PULLUP digital inputs allow each
-                    sound behavior to be enabled independently.
-                </p>
-
-            </div>
-
-
-            <div class="detail-card">
-
-                <h3>
-                    Loop Update
-                </h3>
-
-                <p>
-                    A short 10 ms loop delay is used while the
-                    beat timing itself is controlled with millis().
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- WHAT I LEARNED -->
-
-    <section class="project-section">
-
-        <div class="section-heading">
-
-            <p class="section-number">
-                08.
-            </p>
-
-            <h2>
-                What I Learned
-                <span class="accent-dot">.</span>
-            </h2>
-
-        </div>
-
-
-        <p>
-            This project helped me better understand how embedded
-            software interacts directly with physical hardware.
-            I worked with continuously changing analog input rather
-            than only predefined digital states.
-        </p>
-
-
-        <p>
-            I gained experience with sensor integration,
-            analog-to-digital input, input pull-up logic,
-            frequency mapping, threshold-based control,
-            non-blocking timing, debugging, and
-            hardware-software integration.
-        </p>
-
-
-        <div class="hero-buttons">
-
-            <a
-                href="../index.html#projects"
-                class="button secondary-button"
-            >
-                ← Explore More Projects
-            </a>
-
-        </div>
-
-    </section>
-
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer>
 
         <p>
-            Designed & built by
-            <span>Smridhi Subedi</span>
-            ✦ 2026
+            Designed & built by Smridhi Subedi
+            <span>✦</span>
+            2026
         </p>
 
     </footer>
