@@ -12,7 +12,7 @@
 
     /* Main dark brownish-pink */
     --background: #432725;
-    --background-deep: #281b1b;
+    --background-deep: #2b1a1a;
     --background-soft: #5a3b39;
 
     /* Light colors */
@@ -77,9 +77,9 @@ body {
     background:
         linear-gradient(
             135deg,
-            #755755 0%,
-            #684b4a 48%,
-            #7b5a57 100%
+            #442b29 0%,
+            #382e2e 48%,
+            #2c1c1a 100%
         );
 
     color: var(--light-text);
