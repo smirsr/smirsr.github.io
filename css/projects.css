@@ -13,13 +13,13 @@
 
 .project-hero {
     width: min(1180px, 88%);
-    min-height: 690px;
+    min-height: 680px;
     margin: 0 auto;
-    padding: 125px 0 75px;
+    padding: 120px 0 70px;
 
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.8fr);
-    gap: 70px;
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.8fr);
+    gap: 65px;
     align-items: center;
 }
 
@@ -33,11 +33,7 @@
 
     color: var(--cream);
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(3.7rem, 6.3vw, 6rem);
     line-height: 0.92;
     letter-spacing: -4px;
@@ -57,6 +53,11 @@
     font-size: 0.95rem;
     line-height: 1.75;
 }
+
+
+/* =========================================================
+   PROJECT TAGS
+========================================================= */
 
 .project-tags {
     display: flex;
@@ -79,6 +80,11 @@
     font-weight: 850;
 }
 
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
 .project-hero-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -89,11 +95,11 @@
 
 
 /* =========================================================
-   QUICK PROJECT INFO
+   QUICK INFO
 ========================================================= */
 
 .project-quick-info {
-    max-width: 620px;
+    max-width: 650px;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -141,30 +147,29 @@
 
 .project-hero-visual {
     position: relative;
+    min-width: 0;
 }
 
 .project-hero-image {
     overflow: hidden;
 
-    padding: 13px;
+    padding: 12px;
 
     border: 1px solid rgba(255, 247, 239, 0.16);
-    border-radius: 25px;
+    border-radius: 24px;
 
     background: rgba(255, 247, 239, 0.055);
 
-    box-shadow:
-        0 28px 65px
-        rgba(24, 13, 17, 0.28);
+    box-shadow: 0 28px 65px rgba(24, 13, 17, 0.28);
 
-    transform: rotate(1.2deg);
+    transform: rotate(1deg);
 }
 
 .project-hero-image img {
     width: 100%;
     display: block;
 
-    border-radius: 16px;
+    border-radius: 15px;
 }
 
 .project-visual-caption {
@@ -201,15 +206,13 @@
 .project-section {
     width: min(1080px, 86%);
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 78px 0;
 
-    border-top:
-        1px solid
-        rgba(255, 247, 239, 0.11);
+    border-top: 1px solid rgba(255, 247, 239, 0.11);
 }
 
 .project-section-heading {
-    margin-bottom: 35px;
+    margin-bottom: 34px;
 
     display: flex;
     justify-content: space-between;
@@ -236,11 +239,7 @@
 
     color: var(--cream);
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(2.2rem, 4vw, 3.5rem);
     line-height: 1;
     letter-spacing: -2px;
@@ -270,18 +269,12 @@
 
     padding: 10px;
 
-    border:
-        1px solid
-        rgba(255, 247, 239, 0.15);
-
+    border: 1px solid rgba(255, 247, 239, 0.15);
     border-radius: 24px;
 
-    background:
-        rgba(255, 247, 239, 0.055);
+    background: rgba(255, 247, 239, 0.055);
 
-    box-shadow:
-        0 24px 55px
-        rgba(24, 13, 17, 0.23);
+    box-shadow: 0 24px 55px rgba(24, 13, 17, 0.23);
 }
 
 .project-video {
@@ -295,7 +288,7 @@
 
 
 /* =========================================================
-   THE BUILD
+   LIGHT PROJECT — BUILD
 ========================================================= */
 
 .build-layout {
@@ -310,18 +303,12 @@
 
     padding: 12px;
 
-    border:
-        1px solid
-        rgba(255, 247, 239, 0.15);
-
+    border: 1px solid rgba(255, 247, 239, 0.15);
     border-radius: 22px;
 
-    background:
-        rgba(255, 247, 239, 0.055);
+    background: rgba(255, 247, 239, 0.055);
 
-    box-shadow:
-        0 20px 50px
-        rgba(24, 13, 17, 0.20);
+    box-shadow: 0 20px 50px rgba(24, 13, 17, 0.2);
 }
 
 .build-image img {
@@ -340,11 +327,7 @@
 
     color: var(--cream);
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 1.55rem;
     font-weight: 700;
     line-height: 1.25;
@@ -365,17 +348,13 @@
 
     margin-top: 27px;
 
-    border-top:
-        1px solid
-        var(--border-light);
+    border-top: 1px solid var(--border-light);
 }
 
 .build-components div {
     padding: 14px 8px 11px 0;
 
-    border-bottom:
-        1px solid
-        var(--border-light);
+    border-bottom: 1px solid var(--border-light);
 }
 
 .build-components span {
@@ -398,7 +377,7 @@
 
 
 /* =========================================================
-   SOUND MODES
+   LIGHT PROJECT — SOUND MODES
 ========================================================= */
 
 .sound-mode-grid {
@@ -409,24 +388,18 @@
 
 .sound-mode-card {
     min-height: 245px;
-
     padding: 25px;
 
     display: flex;
     flex-direction: column;
 
-    border:
-        1px solid
-        var(--border-dark);
-
+    border: 1px solid var(--border-dark);
     border-radius: 20px;
 
     background: var(--cream);
     color: var(--brown);
 
-    box-shadow:
-        0 16px 35px
-        rgba(24, 13, 17, 0.13);
+    box-shadow: 0 16px 35px rgba(24, 13, 17, 0.13);
 
     transition:
         transform 0.2s ease,
@@ -436,9 +409,7 @@
 .sound-mode-card:hover {
     transform: translateY(-4px);
 
-    box-shadow:
-        0 22px 45px
-        rgba(24, 13, 17, 0.18);
+    box-shadow: 0 22px 45px rgba(24, 13, 17, 0.18);
 }
 
 .sound-mode-top {
@@ -474,11 +445,7 @@
 
     color: var(--brown);
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 1.55rem;
 }
 
@@ -498,11 +465,7 @@
 
     color: var(--pink-dark);
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 2.25rem;
     font-weight: 800;
     line-height: 1;
@@ -526,18 +489,15 @@
     background: var(--background-deep);
     color: var(--yellow);
 
-    font-family:
-        "SFMono-Regular",
-        Consolas,
-        monospace;
-
+    font-family: "SFMono-Regular", Consolas, monospace;
     font-size: 0.72rem;
     font-weight: 800;
 }
 
 
 /* =========================================================
-   ENGINEERING HIGHLIGHTS
+   ENGINEERING CARDS
+   USED BY BOTH PROJECTS
 ========================================================= */
 
 .engineering-grid {
@@ -548,17 +508,12 @@
 
 .engineering-card {
     min-height: 220px;
-
     padding: 22px;
 
-    border:
-        1px solid
-        rgba(255, 247, 239, 0.13);
-
+    border: 1px solid rgba(255, 247, 239, 0.13);
     border-radius: 18px;
 
-    background:
-        rgba(255, 247, 239, 0.055);
+    background: rgba(255, 247, 239, 0.055);
 }
 
 .engineering-icon {
@@ -585,11 +540,7 @@
 
     color: var(--cream);
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 1.15rem;
 }
 
@@ -604,267 +555,12 @@
 
 
 /* =========================================================
-   TAKEAWAYS
-========================================================= */
-
-.project-takeaway {
-    padding-top: 95px;
-    padding-bottom: 105px;
-
-    display: grid;
-    grid-template-columns: 120px minmax(0, 720px);
-    gap: 45px;
-
-    justify-content: center;
-}
-
-.takeaway-number {
-    color:
-        rgba(255, 247, 239, 0.12);
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 5rem;
-    font-weight: 800;
-    line-height: 1;
-}
-
-.takeaway-content h2 {
-    max-width: 700px;
-
-    margin: 9px 0 20px;
-
-    color: var(--cream);
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: clamp(2.4rem, 5vw, 4.2rem);
-    line-height: 1;
-    letter-spacing: -2.5px;
-}
-
-.takeaway-content h2 span {
-    color: var(--pink);
-}
-
-.takeaway-content > p:not(.eyebrow) {
-    max-width: 670px;
-
-    margin: 0 0 28px;
-
-    color: var(--light-text-soft);
-
-    font-size: 0.82rem;
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.project-page footer {
-    border-top:
-        1px solid
-        rgba(255, 247, 239, 0.10);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 950px) {
-
-    .project-hero {
-        min-height: auto;
-
-        padding-top: 120px;
-
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .project-hero-copy {
-        max-width: 760px;
-    }
-
-    .project-hero-visual {
-        max-width: 680px;
-    }
-
-    .project-hero h1 {
-        max-width: 680px;
-    }
-
-    .build-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .engineering-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 650px) {
-
-    .project-hero {
-        width: 88%;
-
-        padding:
-            105px
-            0
-            55px;
-
-        gap: 35px;
-    }
-
-    .project-hero h1 {
-        margin-top: 9px;
-
-        font-size: clamp(3rem, 15vw, 4.2rem);
-        line-height: 0.94;
-        letter-spacing: -3px;
-    }
-
-    .project-hero-description {
-        font-size: 0.84rem;
-    }
-
-    .project-tags {
-        gap: 6px;
-    }
-
-    .project-tags span {
-        font-size: 0.61rem;
-    }
-
-    .project-hero-buttons {
-        flex-direction: column;
-    }
-
-    .project-hero-buttons .button {
-        width: 100%;
-    }
-
-    .project-quick-info {
-        grid-template-columns: 1fr;
-    }
-
-    .project-quick-info div {
-        padding:
-            11px
-            0 !important;
-
-        border-right: 0 !important;
-        border-bottom:
-            1px solid
-            var(--border-light);
-    }
-
-    .project-quick-info div:last-child {
-        border-bottom: 0;
-    }
-
-    .project-section {
-        width: 88%;
-        padding: 60px 0;
-    }
-
-    .project-section-heading {
-        margin-bottom: 27px;
-
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 13px;
-    }
-
-    .project-section-heading h2 {
-        font-size: 2.5rem;
-    }
-
-    .project-section-intro {
-        max-width: 100%;
-    }
-
-    .build-layout {
-        gap: 30px;
-    }
-
-    .build-components {
-        grid-template-columns: 1fr;
-    }
-
-    .sound-mode-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .sound-mode-card {
-        min-height: 220px;
-    }
-
-    .engineering-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .engineering-card {
-        min-height: auto;
-    }
-
-    .engineering-icon {
-        margin-bottom: 24px;
-    }
-
-    .project-takeaway {
-        display: block;
-
-        padding-top: 70px;
-        padding-bottom: 80px;
-    }
-
-    .takeaway-number {
-        margin-bottom: 25px;
-
-        font-size: 3.5rem;
-    }
-
-    .takeaway-content h2 {
-        font-size: 2.8rem;
-    }
-
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .sound-mode-card {
-        transition: none;
-    }
-
-}
-
-/* =========================================================
    JAVA GAME — SCREENSHOTS
 ========================================================= */
 
 .game-screenshot-feature {
     overflow: hidden;
+
     padding: 10px;
     margin-bottom: 14px;
 
@@ -872,6 +568,8 @@
     border-radius: 22px;
 
     background: rgba(255, 247, 239, 0.055);
+
+    box-shadow: 0 20px 50px rgba(24, 13, 17, 0.18);
 }
 
 .game-screenshot-feature img {
@@ -880,6 +578,7 @@
     display: block;
 
     object-fit: cover;
+
     border-radius: 14px;
 }
 
@@ -893,8 +592,8 @@
     width: 100%;
     height: 100%;
     min-height: 300px;
-
     display: block;
+
     object-fit: cover;
 
     padding: 9px;
@@ -969,6 +668,57 @@
     line-height: 1.55;
 }
 
+
+/* =========================================================
+   TAKEAWAYS
+========================================================= */
+
+.project-takeaway {
+    padding-top: 95px;
+    padding-bottom: 105px;
+
+    display: grid;
+    grid-template-columns: 120px minmax(0, 720px);
+    gap: 45px;
+
+    justify-content: center;
+}
+
+.takeaway-number {
+    color: rgba(255, 247, 239, 0.12);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.takeaway-content h2 {
+    max-width: 700px;
+    margin: 9px 0 20px;
+
+    color: var(--cream);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    line-height: 1;
+    letter-spacing: -2.5px;
+}
+
+.takeaway-content h2 span {
+    color: var(--pink);
+}
+
+.takeaway-content > p:not(.eyebrow) {
+    max-width: 670px;
+    margin: 0 0 28px;
+
+    color: var(--light-text-soft);
+
+    font-size: 0.82rem;
+    line-height: 1.8;
+}
+
 .takeaway-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -977,10 +727,47 @@
 
 
 /* =========================================================
-   JAVA RESPONSIVE
+   PROJECT FOOTER
+========================================================= */
+
+.project-page footer {
+    border-top: 1px solid rgba(255, 247, 239, 0.1);
+}
+
+
+/* =========================================================
+   TABLET
 ========================================================= */
 
 @media (max-width: 950px) {
+
+    .project-hero {
+        min-height: auto;
+        padding-top: 120px;
+
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .project-hero-copy {
+        max-width: 760px;
+    }
+
+    .project-hero-visual {
+        max-width: 680px;
+    }
+
+    .project-hero h1 {
+        max-width: 680px;
+    }
+
+    .build-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .engineering-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .development-layout {
         grid-template-columns: 1fr;
@@ -990,7 +777,133 @@
 }
 
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 650px) {
+
+    .project-hero {
+        width: 88%;
+
+        padding: 105px 0 55px;
+
+        gap: 35px;
+    }
+
+    .project-hero h1 {
+        margin-top: 9px;
+
+        font-size: clamp(3rem, 15vw, 4.2rem);
+        line-height: 0.94;
+        letter-spacing: -3px;
+    }
+
+    .project-hero-description {
+        font-size: 0.84rem;
+    }
+
+    .project-tags {
+        gap: 6px;
+    }
+
+    .project-tags span {
+        font-size: 0.61rem;
+    }
+
+    .project-hero-buttons {
+        flex-direction: column;
+    }
+
+    .project-hero-buttons .button {
+        width: 100%;
+    }
+
+
+    /* QUICK INFO */
+
+    .project-quick-info {
+        grid-template-columns: 1fr;
+    }
+
+    .project-quick-info div {
+        padding: 11px 0;
+
+        border-right: 0 !important;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .project-quick-info div:not(:first-child) {
+        padding-left: 0;
+    }
+
+    .project-quick-info div:last-child {
+        border-bottom: 0;
+    }
+
+
+    /* SECTIONS */
+
+    .project-section {
+        width: 88%;
+        padding: 60px 0;
+    }
+
+    .project-section-heading {
+        margin-bottom: 27px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 13px;
+    }
+
+    .project-section-heading h2 {
+        font-size: 2.5rem;
+    }
+
+    .project-section-intro {
+        max-width: 100%;
+    }
+
+
+    /* LIGHT BUILD */
+
+    .build-layout {
+        gap: 30px;
+    }
+
+    .build-components {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* SOUND MODES */
+
+    .sound-mode-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sound-mode-card {
+        min-height: 220px;
+    }
+
+
+    /* ENGINEERING */
+
+    .engineering-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .engineering-card {
+        min-height: auto;
+    }
+
+    .engineering-icon {
+        margin-bottom: 24px;
+    }
+
+
+    /* JAVA SCREENSHOTS */
 
     .game-screenshot-grid {
         grid-template-columns: 1fr;
@@ -1000,12 +913,52 @@
         min-height: 0;
     }
 
+
+    /* JAVA DEVELOPMENT */
+
+    .development-layout {
+        gap: 30px;
+    }
+
+
+    /* TAKEAWAYS */
+
+    .project-takeaway {
+        display: block;
+
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
+    .takeaway-number {
+        margin-bottom: 25px;
+
+        font-size: 3.5rem;
+    }
+
+    .takeaway-content h2 {
+        font-size: 2.8rem;
+    }
+
     .takeaway-buttons {
         flex-direction: column;
     }
 
     .takeaway-buttons .button {
         width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sound-mode-card {
+        transition: none;
     }
 
 }
