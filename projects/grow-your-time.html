@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="GrowYourTime productivity web application and WEHack hackathon project by Smridhi Subedi."
+    >
+
+    <title>GrowYourTime | Smridhi Subedi</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/projects.css">
+</head>
+
+
+<body class="project-page">
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+    <div class="background-shape shape-three"></div>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+        <div class="nav-inner">
+
+            <a href="../index.html" class="nav-logo">
+                Smridhi Subedi<span>✦</span>
+            </a>
+
+            <div class="desktop-nav">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+    </nav>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        class="mobile-overlay"
+        id="mobileOverlay"
+    ></div>
+
+    <aside
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true"
+    >
+
+        <div class="mobile-menu-header">
+
+            <a href="../index.html" class="nav-logo">
+                Smridhi Subedi<span>✦</span>
+            </a>
+
+            <button
+                class="close-menu-button"
+                id="closeMenuButton"
+                aria-label="Close navigation menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="mobile-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+
+
+        <div class="mobile-menu-footer">
+            Computer Engineering · UTD
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <header class="project-hero">
+
+        <div class="project-hero-copy">
+
+            <p class="eyebrow">
+                ✦ WEHACK PROJECT
+            </p>
+
+            <h1>
+                GrowYour<span>Time</span>
+            </h1>
+
+            <p class="project-hero-description">
+                A gamified productivity web application that turns
+                everyday task completion into progress for a virtual plant.
+            </p>
+
+
+            <div class="project-tags">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Vite</span>
+                <span>Tailwind CSS</span>
+                <span>Gamification</span>
+            </div>
+
+
+            <div class="project-hero-buttons">
+
+                <a
+                    href="https://smirsr.github.io/GrowYourTimes/"
+                    class="button button-yellow"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Launch Live App ↗
+                </a>
+
+                <a
+                    href="https://github.com/smirsr/GrowYourTimes"
+                    class="button button-outline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View GitHub ↗
+                </a>
+
+            </div>
+
+
+            <div class="project-quick-info">
+
+                <div>
+                    <span>EVENT</span>
+                    <strong>WEHack</strong>
+                </div>
+
+                <div>
+                    <span>FOCUS</span>
+                    <strong>Productivity</strong>
+                </div>
+
+                <div>
+                    <span>TYPE</span>
+                    <strong>Web App</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-hero-visual">
+
+            <div class="project-hero-image">
+
+                <img
+                    src="../images/grow-your-time/dashboard.jpg"
+                    alt="GrowYourTime dashboard"
+                >
+
+            </div>
+
+
+            <div class="project-visual-caption">
+
+                <span>01</span>
+
+                <p>
+                    Dashboard connecting daily tasks,
+                    earned points, and virtual plant growth.
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =================================================
+             01 — THE IDEA
+        ================================================== -->
+
+        <section class="project-section">
+
+            <div class="project-section-heading">
+
+                <div>
+                    <p class="project-section-number">01</p>
+
+                    <h2>
+                        The Idea<span>.</span>
+                    </h2>
+                </div>
+
+                <p class="project-section-intro">
+                    Making everyday productivity more engaging
+                    by connecting completed tasks to visible progress.
+                </p>
+
+            </div>
+
+
+            <div class="development-layout">
+
+                <div class="development-main">
+
+                    <p class="eyebrow">
+                        PRODUCTIVITY + GAMIFICATION
+                    </p>
+
+                    <h3>
+                        Making progress feel more tangible.
+                    </h3>
+
+                    <p>
+                        GrowYourTime combines a traditional task manager
+                        with a virtual plant growth system.
+                    </p>
+
+                    <p>
+                        Instead of simply checking an item off a list,
+                        completing a task earns points that contribute
+                        toward the user's virtual garden.
+                    </p>
+
+                    <p>
+                        This creates a simple feedback loop: organize work,
+                        complete tasks, earn points, and use that progress
+                        to grow and care for a plant.
+                    </p>
+
+                </div>
+
+
+                <div class="development-details">
+
+                    <div>
+                        <span>01</span>
+                        <p>Create and organize tasks</p>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <p>Complete tasks to earn points</p>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <p>Progress through plant stages</p>
+                    </div>
+
+                    <div>
+                        <span>04</span>
+                        <p>Use points to care for the plant</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             02 — HOW IT WORKS
+        ================================================== -->
+
+        <section class="project-section">
+
+            <div class="project-section-heading">
+
+                <div>
+                    <p class="project-section-number">02</p>
+
+                    <h2>
+                        How It Works<span>.</span>
+                    </h2>
+                </div>
+
+                <p class="project-section-intro">
+                    Four connected parts create the application's
+                    main productivity loop.
+                </p>
+
+            </div>
+
+
+            <div class="engineering-grid">
+
+                <article class="engineering-card">
+
+                    <span class="engineering-icon">
+                        01
+                    </span>
+
+                    <h3>Plan</h3>
+
+                    <p>
+                        Create and organize tasks with
+                        point values and deadlines.
+                    </p>
+
+                </article>
+
+
+                <article class="engineering-card">
+
+                    <span class="engineering-icon">
+                        02
+                    </span>
+
+                    <h3>Complete</h3>
+
+                    <p>
+                        Finish tasks and collect the
+                        points assigned to them.
+                    </p>
+
+                </article>
+
+
+                <article class="engineering-card">
+
+                    <span class="engineering-icon">
+                        03
+                    </span>
+
+                    <h3>Grow</h3>
+
+                    <p>
+                        Earn enough points to move
+                        the plant through growth stages.
+                    </p>
+
+                </article>
+
+
+                <article class="engineering-card">
+
+                    <span class="engineering-icon">
+                        04
+                    </span>
+
+                    <h3>Care</h3>
+
+                    <p>
+                        Spend points on water,
+                        sunlight, and nutrients.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             03 — TASK MANAGEMENT
+        ================================================== -->
+
+        <section class="project-section">
+
+            <div class="project-section-heading">
+
+                <div>
+                    <p class="project-section-number">03</p>
+
+                    <h2>
+                        Task Management<span>.</span>
+                    </h2>
+                </div>
+
+                <p class="project-section-intro">
+                    The productivity side of GrowYourTime
+                    handles everyday planning and progress tracking.
+                </p>
+
+            </div>
+
+
+            <div class="build-layout">
+
+                <div class="build-image">
+
+                    <img
+                        src="../images/grow-your-time/tasks.jpg"
+                        alt="GrowYourTime task management page"
+                    >
+
+                </div>
+
+
+                <div class="build-copy">
+
+                    <p class="build-lead">
+                        Every task contributes to progress.
+                    </p>
+
+                    <p>
+                        Users can create, edit, complete, delete,
+                        search, sort, and filter their tasks from
+                        one interface.
+                    </p>
+
+                    <p>
+                        Each task has its own point reward,
+                        connecting normal productivity actions
+                        directly to the plant system.
+                    </p>
+
+
+                    <div class="build-components">
+
+                        <div>
+                            <span>01</span>
+                            <p>Task Creation</p>
+                        </div>
+
+                        <div>
+                            <span>02</span>
+                            <p>Point Rewards</p>
+                        </div>
+
+                        <div>
+                            <span>03</span>
+                            <p>Search & Filtering</p>
+                        </div>
+
+                        <div>
+                            <span>04</span>
+                            <p>Completion Tracking</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             04 — GARDEN
+        ================================================== -->
+
+        <section class="project-section">
+
+            <div class="project-section-heading">
+
+                <div>
+                    <p class="project-section-number">04</p>
+
+                    <h2>
+                        The Garden<span>.</span>
+                    </h2>
+                </div>
+
+                <p class="project-section-intro">
+                    Productivity becomes a visual reward
+                    through an interactive virtual plant.
+                </p>
+
+            </div>
+
+
+            <div class="build-layout">
+
+                <div class="build-image">
+
+                    <img
+                        src="../images/grow-your-time/garden.jpg"
+                        alt="GrowYourTime garden page"
+                    >
+
+                </div>
+
+
+                <div class="build-copy">
+
+                    <p class="build-lead">
+                        Complete work. Grow something.
+                    </p>
+
+                    <p>
+                        The garden tracks the current plant,
+                        its growth stage, total points,
+                        and overall health.
+                    </p>
+
+                    <p>
+                        Earned points can be used for water,
+                        sunlight, and nutrients, tying plant
+                        care directly to completed work.
+                    </p>
+
+
+                    <div class="build-components">
+
+                        <div>
+                            <span>01</span>
+                            <p>Growth Stages</p>
+                        </div>
+
+                        <div>
+                            <span>02</span>
+                            <p>Plant Health</p>
+                        </div>
+
+                        <div>
+                            <span>03</span>
+                            <p>Care Controls</p>
+                        </div>
+
+                        <div>
+                            <span>04</span>
+                            <p>Point System</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             05 — ASSISTANT
+        ================================================== -->
+
+        <section class="project-section">
+
+            <div class="project-section-heading">
+
+                <div>
+                    <p class="project-section-number">05</p>
+
+                    <h2>
+                        Carmelina<span>.</span>
+                    </h2>
+                </div>
+
+                <p class="project-section-intro">
+                    A conversational assistant adds another
+                    layer to the productivity experience.
+                </p>
+
+            </div>
+
+
+            <div class="build-layout">
+
+                <div class="build-image">
+
+                    <img
+                        src="../images/grow-your-time/assistant.jpg"
+                        alt="GrowYourTime Carmelina assistant"
+                    >
+
+                </div>
+
+
+                <div class="build-copy">
+
+                    <p class="build-lead">
+                        Guidance inside the application.
+                    </p>
+
+                    <p>
+                        Carmelina gives users another way
+                        to interact with GrowYourTime.
+                    </p>
+
+                    <p>
+                        The assistant provides productivity
+                        suggestions, task help, and virtual
+                        plant care guidance.
+                    </p>
+
+
+                    <div class="build-components">
+
+                        <div>
+                            <span>01</span>
+                            <p>Task Help</p>
+                        </div>
+
+                        <div>
+                            <span>02</span>
+                            <p>Productivity Tips</p>
+                        </div>
+
+                        <div>
+                            <span>03</span>
+                            <p>Plant Care</p>
+                        </div>
+
+                        <div>
+                            <span>04</span>
+                            <p>Quick Prompts</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             06 — INTERFACE
+        ================================================== -->
+
+        <section class="project-section">
+
+            <div class="project-section-heading">
+
+                <div>
+                    <p class="project-section-number">06</p>
+
+                    <h2>
+                        Interface<span>.</span>
+                    </h2>
+                </div>
+
+                <p class="project-section-intro">
+                    The main features share one consistent
+                    visual system across the application.
+                </p>
+
+            </div>
+
+
+            <div class="game-screenshot-feature">
+
+                <img
+                    src="../images/grow-your-time/dashboard.jpg"
+                    alt="GrowYourTime dashboard"
+                >
+
+            </div>
+
+
+            <div class="game-screenshot-grid">
+
+                <img
+                    src="../images/grow-your-time/tasks.jpg"
+                    alt="GrowYourTime tasks page"
+                >
+
+                <img
+                    src="../images/grow-your-time/garden.jpg"
+                    alt="GrowYourTime garden page"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             07 — APP DEMO
+        ================================================== -->
+
+        <section
+            class="project-section"
+            id="demo"
+        >
+
+            <div class="project-section-heading">
+
+                <div>
+                    <p class="project-section-number">07</p>
+
+                    <h2>
+                        App Demo<span>.</span>
+                    </h2>
+                </div>
+
+                <p class="project-section-intro">
+                    A walkthrough of the working application
+                    and its main interactive features.
+                </p>
+
+            </div>
+
+
+            <div class="project-video-frame">
+
+                <video
+                    class="project-video"
+                    controls
+                    muted
+                    playsinline
+                    preload="metadata"
+                >
+
+                    <source
+                        src="../videos/GrowYourTime-Demo.mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support the video tag.
+
+                </video>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             08 — TECHNICAL BUILD
+        ================================================== -->
+
+        <section class="project-section">
+
+            <div class="project-section-heading">
+
+                <div>
+                    <p class="project-section-number">08</p>
+
+                    <h2>
+                        Technical Build<span>.</span>
+                    </h2>
+                </div>
+
+                <p class="project-section-intro">
+                    The portfolio version keeps the original
+                    concept interactive while remaining
+                    lightweight enough for GitHub Pages.
+                </p>
+
+            </div>
+
+
+            <div class="engineering-grid">
+
+                <article class="engineering-card">
+
+                    <span class="engineering-icon">
+                        01
+                    </span>
+
+                    <h3>React</h3>
+
+                    <p>
+                        Reusable components power the dashboard,
+                        tasks, garden, and assistant.
+                    </p>
+
+                </article>
+
+
+                <article class="engineering-card">
+
+                    <span class="engineering-icon">
+                        02
+                    </span>
+
+                    <h3>TypeScript</h3>
+
+                    <p>
+                        Typed application logic keeps frontend
+                        data and behavior organized.
+                    </p>
+
+                </article>
+
+
+                <article class="engineering-card">
+
+                    <span class="engineering-icon">
+                        03
+                    </span>
+
+                    <h3>Local Storage</h3>
+
+                    <p>
+                        Tasks, points, and plant progress persist
+                        directly in the user's browser.
+                    </p>
+
+                </article>
+
+
+                <article class="engineering-card">
+
+                    <span class="engineering-icon">
+                        04
+                    </span>
+
+                    <h3>Routing</h3>
+
+                    <p>
+                        Client-side navigation connects the
+                        application's main views.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             09 — TAKEAWAYS
+        ================================================== -->
+
+        <section class="project-section project-takeaway">
+
+            <div class="takeaway-number">
+                09
+            </div>
+
+
+            <div class="takeaway-content">
+
+                <p class="eyebrow">
+                    PROJECT TAKEAWAYS
+                </p>
+
+                <h2>
+                    Building multiple features into
+                    <span>one complete experience.</span>
+                </h2>
+
+                <p>
+                    GrowYourTime gave me experience connecting
+                    several parts of a web application instead
+                    of treating each feature independently.
+                    The project combines task management,
+                    persistent user progress, gamification,
+                    virtual plant care, responsive interface
+                    design, and client-side routing into one
+                    cohesive application.
+                </p>
+
+
+                <div class="takeaway-buttons">
+
+                    <a
+                        href="https://smirsr.github.io/GrowYourTimes/"
+                        class="button button-yellow"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Launch Live App ↗
+                    </a>
+
+
+                    <a
+                        href="https://github.com/smirsr/GrowYourTimes"
+                        class="button button-outline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View GitHub ↗
+                    </a>
+
+
+                    <a
+                        href="../index.html#projects"
+                        class="button button-outline"
+                    >
+                        ← More Projects
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Designed & built by Smridhi Subedi
+            <span>✦</span>
+            2026
+        </p>
+
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
