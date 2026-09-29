@@ -12,7 +12,7 @@ const mobileMenu =
     document.getElementById("mobileMenu");
 
 const mobileOverlay =
-    document.getElementById("mobileOverlay");
+    document.getElementById("mobileMenuOverlay");
 
 
 function openMenu() {
@@ -107,9 +107,11 @@ if (mobileOverlay) {
 }
 
 
+// Close mobile menu when clicking one of its links
+
 const mobileLinks =
     document.querySelectorAll(
-        ".mobile-links a"
+        ".mobile-menu-links a"
     );
 
 
@@ -121,6 +123,7 @@ mobileLinks.forEach((link) => {
     );
 
 });
+
 
 
 // =========================================================
@@ -242,6 +245,7 @@ if (emailModal) {
 }
 
 
+
 // =========================================================
 // COPY EMAIL
 // =========================================================
@@ -359,6 +363,7 @@ function showCopySuccess() {
 }
 
 
+
 // =========================================================
 // ESCAPE KEY
 // =========================================================
@@ -379,6 +384,7 @@ document.addEventListener(
 );
 
 
+
 // =========================================================
 // CLOSE MOBILE MENU ON DESKTOP
 // =========================================================
@@ -395,6 +401,7 @@ window.addEventListener(
 
     }
 );
+
 
 
 // =========================================================
@@ -453,5 +460,119 @@ internalLinks.forEach((link) => {
 
         }
     );
+
+});
+
+
+
+// =========================================================
+// PROJECT PAGE VIDEO
+// =========================================================
+
+const projectVideos =
+    document.querySelectorAll(
+        ".project-video"
+    );
+
+
+projectVideos.forEach((video) => {
+
+    // Pause other project videos if another one starts playing
+
+    video.addEventListener(
+        "play",
+        function () {
+
+            projectVideos.forEach(
+                (otherVideo) => {
+
+                    if (
+                        otherVideo !== video &&
+                        !otherVideo.paused
+                    ) {
+
+                        otherVideo.pause();
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+});
+
+
+
+// =========================================================
+// PROJECT CARD KEYBOARD ACCESSIBILITY
+// =========================================================
+
+const projectCards =
+    document.querySelectorAll(
+        ".project-card"
+    );
+
+
+projectCards.forEach((card) => {
+
+    const link =
+        card.querySelector("a");
+
+
+    if (!link) {
+        return;
+    }
+
+
+    card.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
+
+                event.preventDefault();
+
+                link.click();
+
+            }
+
+        }
+    );
+
+});
+
+
+
+// =========================================================
+// EXTERNAL LINKS
+// =========================================================
+
+const externalLinks =
+    document.querySelectorAll(
+        'a[target="_blank"]'
+    );
+
+
+externalLinks.forEach((link) => {
+
+    // Make sure external links opened in a new tab
+    // cannot access the original page.
+
+    if (!link.rel.includes("noopener")) {
+
+        link.rel += " noopener";
+
+    }
+
+    if (!link.rel.includes("noreferrer")) {
+
+        link.rel += " noreferrer";
+
+    }
 
 });
