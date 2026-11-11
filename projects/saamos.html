@@ -1,0 +1,808 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4b3035">
+
+  <meta name="description"
+    content="SAAMOS is an offline assistive technology project exploring voice interaction, computer vision, and directional audio for blind and low-vision users.">
+
+  <title>SAAMOS | Smridhi Subedi</title>
+
+  <!-- Existing portfolio theme -->
+  <link rel="stylesheet" href="../css/refresh.css">
+  <script defer src="../js/refresh.js"></script>
+
+  <style>
+    /* SAAMOS page-specific styling */
+
+    .saam-page {
+      --saam-brown: #4b3035;
+      --saam-pink: #ed8bc9;
+      --saam-yellow: #ffe9a8;
+      --saam-teal: #83d1c6;
+    }
+
+    .saam-page .detail-hero {
+      padding-block: 70px 24px;
+    }
+
+    .saam-page .detail-hero h1 {
+      max-width: 920px;
+    }
+
+    .saam-lede {
+      max-width: 800px !important;
+    }
+
+    /* Hero buttons */
+
+    .saam-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 24px 0 8px;
+    }
+
+    .saam-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 19px;
+      border-radius: 999px;
+      background: var(--yellow, #ffe9a8);
+      color: var(--ink, #35262a);
+      font-weight: 850;
+      text-decoration: none;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .saam-actions a:hover {
+      transform: translateY(-3px);
+    }
+
+    .saam-actions a.outline {
+      background: transparent;
+      color: var(--cream, #fff7ed);
+      border: 1px solid #ffffff77;
+    }
+
+    /* Quick project facts */
+
+    .saam-summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 22px 0 12px;
+    }
+
+    .saam-summary div {
+      border: 1px solid var(--line, #ffffff40);
+      border-radius: 15px;
+      padding: 18px;
+      background: #ffffff0c;
+    }
+
+    .saam-summary strong {
+      color: var(--yellow, #ffe9a8);
+      display: block;
+      font-size: 1.05rem;
+    }
+
+    .saam-summary small {
+      color: var(--muted, #e6d2d5);
+    }
+
+    /* Main page */
+
+    .saam-page .detail-layout {
+      grid-template-columns: minmax(0, 1fr) 260px;
+    }
+
+    .saam-page .story-panel p + p {
+      margin-top: 14px;
+    }
+
+    .saam-page .story-panel h3 {
+      margin: 18px 0 8px;
+      font-size: 1.04rem;
+    }
+
+    .saam-page .story-panel ul {
+      margin: 12px 0 0;
+      padding-left: 22px;
+    }
+
+    .saam-page .story-panel li {
+      margin: 9px 0;
+    }
+
+    .saam-page .story-panel a {
+      color: #75405f;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Architecture diagram */
+
+    .arch {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .arch-node {
+      border: 2px solid #4b303525;
+      background: #ffffffa8;
+      padding: 16px;
+      border-radius: 16px;
+    }
+
+    .arch-node strong {
+      display: block;
+      color: #4b3035;
+    }
+
+    .arch-node span {
+      font-size: .9rem;
+      color: #554949;
+    }
+
+    .arch-arrow {
+      text-align: center;
+      font-weight: 900;
+      color: #88516f;
+      line-height: 1;
+    }
+
+    /* Highlighted explanation */
+
+    .saam-callout {
+      padding: 16px 18px;
+      border-left: 5px solid #b55e92;
+      background: #ffffffa9;
+      border-radius: 0 12px 12px 0;
+      margin-top: 18px;
+      color: #473b3b;
+    }
+
+    /* Example terminal interaction */
+
+    .saam-log {
+      background: #30252c;
+      color: #fff7ed;
+      padding: 19px;
+      border-radius: 16px;
+      overflow-wrap: anywhere;
+      font: .9rem/1.8 ui-monospace, SFMono-Regular, Consolas, monospace;
+      margin-top: 17px;
+    }
+
+    .saam-log .input {
+      color: #ffe9a8;
+    }
+
+    .saam-log .output {
+      color: #83d1c6;
+    }
+
+    .saam-note {
+      font-size: .87rem !important;
+      margin-top: 10px !important;
+    }
+
+    /* Team member cards */
+
+    .roles {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .role {
+      border: 1px solid #30252522;
+      padding: 15px;
+      background: #ffffff78;
+      border-radius: 14px;
+    }
+
+    .role strong {
+      display: block;
+    }
+
+    .role span {
+      display: block;
+      font-size: .89rem;
+      margin-top: 4px;
+      color: #5b4646;
+    }
+
+    /* Future demo video area */
+
+    .demo-slot {
+      border: 2px dashed #8b677b;
+      border-radius: 18px;
+      text-align: center;
+      padding: 36px 18px;
+      margin-top: 18px;
+      background: #ffffff75;
+    }
+
+    .demo-slot strong {
+      display: block;
+      font-size: 1.12rem;
+    }
+
+    .demo-slot p {
+      margin-top: 7px !important;
+    }
+
+    /* Sidebar */
+
+    .saam-page .detail-aside a {
+      overflow-wrap: anywhere;
+    }
+
+    /* Accessibility */
+
+    .saam-page a:focus-visible {
+      outline: 3px solid var(--saam-teal);
+      outline-offset: 4px;
+    }
+
+    /* Mobile layout */
+
+    @media (max-width: 720px) {
+
+      .saam-page .detail-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .saam-page .detail-aside {
+        position: static;
+      }
+
+      .saam-summary {
+        grid-template-columns: 1fr;
+      }
+
+      .roles {
+        grid-template-columns: 1fr;
+      }
+
+      .saam-page .detail-hero {
+        padding-top: 38px;
+      }
+
+      .saam-actions a {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .saam-actions a {
+        transition: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body class="saam-page">
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Navigation -->
+
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main navigation">
+
+      <a class="brand" href="../index.html#home">
+        Smridhi Subedi <span>✦</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#connect">Connect</a>
+        <a href="../index.html#contact">Contact</a>
+
+        <a
+          class="nav-resume"
+          href="../documents/Smridhi-Subedi-Resume.pdf"
+          target="_blank"
+          rel="noopener">
+          Resume ↗
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO SECTION -->
+
+    <section class="detail-hero wrap">
+
+      <span class="eyebrow">
+        FEATURED PROJECT · HACKEDGE 2026 · WORK IN PROGRESS
+      </span>
+
+      <h1>
+        SAAMOS <span style="color:var(--pink)">✦</span>
+      </h1>
+
+      <p class="saam-lede">
+        An offline assistive system exploring how voice
+        interaction, computer vision, and directional audio
+        can make everyday information more accessible
+        to blind and low-vision users.
+      </p>
+
+      <div class="saam-actions">
+
+        <a
+          href="https://github.com/smirsr/SAAMOS"
+          target="_blank"
+          rel="noopener noreferrer">
+          Explore source code ↗
+        </a>
+
+        <a class="outline" href="#demo">
+          See prototype walkthrough ↓
+        </a>
+
+      </div>
+
+      <div class="saam-summary">
+
+        <div>
+          <strong>My role</strong>
+          <small>
+            Team lead · Audio development · Integration & testing
+          </small>
+        </div>
+
+        <div>
+          <strong>Platform</strong>
+          <small>
+            TI SK-AM62 · Embedded Linux · Python
+          </small>
+        </div>
+
+        <div>
+          <strong>Design goal</strong>
+          <small>
+            Offline, voice-first, accessible interaction
+          </small>
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="detail-layout wrap">
+
+      <div class="detail-main">
+
+        <!-- PURPOSE -->
+
+        <section class="story-panel" id="purpose">
+
+          <h2>It started with a person, not a feature ♡</h2>
+
+          <p>
+            What motivates me most about engineering is
+            the opportunity to make someone's life easier.
+            With SAAMOS, our team wanted to explore a practical
+            accessibility question: how could someone ask
+            about nearby objects and receive useful spoken
+            feedback without depending on a network connection?
+          </p>
+
+          <p>
+            The project focuses on voice commands, local
+            processing, and audio responses as building
+            blocks for an assistive experience.
+          </p>
+
+          <p>
+            It is a developing prototype, not a tested
+            mobility aid or a replacement for a cane,
+            guide dog, or other accessibility tools.
+          </p>
+
+        </section>
+
+        <!-- ARCHITECTURE -->
+
+        <section class="story-panel" id="system">
+
+          <h2>How the system works</h2>
+
+          <p>
+            SAAMOS connects audio input, a command controller,
+            object-detection results, and synthesized responses.
+            The pipeline is designed for offline operation
+            on embedded Linux hardware.
+          </p>
+
+          <div class="arch" role="group"
+               aria-label="SAAMOS system architecture">
+
+            <div class="arch-node">
+              <strong>01 · Speak a request</strong>
+              <span>
+                Microphone input and local speech-to-text,
+                using Vosk in development.
+              </span>
+            </div>
+
+            <div class="arch-arrow" aria-hidden="true">↓</div>
+
+            <div class="arch-node">
+              <strong>02 · Interpret the request</strong>
+              <span>
+                The controller decides whether to describe
+                the scene, locate an object, or stop.
+              </span>
+            </div>
+
+            <div class="arch-arrow" aria-hidden="true">↓</div>
+
+            <div class="arch-node">
+              <strong>03 · Get visual information</strong>
+              <span>
+                The vision subsystem supplies object labels
+                and relative positions. Mock results are
+                used in integration tests.
+              </span>
+            </div>
+
+            <div class="arch-arrow" aria-hidden="true">↓</div>
+
+            <div class="arch-node">
+              <strong>04 · Speak the result</strong>
+              <span>
+                Text-to-speech and directional cues
+                communicate the response through audio.
+              </span>
+            </div>
+
+          </div>
+
+          <div class="saam-callout">
+            <strong>Why offline?</strong>
+            Reducing reliance on connectivity is a design
+            choice intended to make basic assistance
+            available in more settings. Real-world
+            reliability and accessibility still need evaluation.
+          </div>
+
+        </section>
+
+        <!-- PROTOTYPE WALKTHROUGH -->
+
+        <section class="story-panel" id="demo">
+
+          <h2>A prototype interaction</h2>
+
+          <p>
+            Here's an example from the integrated controller
+            tests. It shows how a request can turn into
+            a concise, directional response.
+          </p>
+
+          <div class="saam-log" aria-label="Example SAAMOS interaction">
+
+            <div class="input">
+              USER &gt; What do you see?
+            </div>
+
+            <div class="output">
+              SAAMOS &gt; Bottle left, cup right, laptop center.
+            </div>
+
+            <div class="input">
+              USER &gt; Where's my guitar?
+            </div>
+
+            <div class="output">
+              SAAMOS &gt; Not found.
+            </div>
+
+            <div class="input">
+              USER &gt; Stop.
+            </div>
+
+            <div class="output">
+              SAAMOS &gt; Stopping.
+            </div>
+
+          </div>
+
+          <p class="saam-note">
+            Illustrative output based on integration tests
+            with mock vision inputs, not a recording
+            of live camera detection.
+          </p>
+
+          <!-- Replace with an actual demo video later -->
+
+          <div class="demo-slot">
+
+            <strong>Real demo video / hardware photos</strong>
+
+            <p>
+              Reserved for the HackEdge presentation video
+              and actual TI board photos. No demo is embedded yet.
+            </p>
+
+          </div>
+
+        </section>
+
+        <!-- CONTRIBUTIONS -->
+
+        <section class="story-panel" id="contribution">
+
+          <h2>My contribution and the team behind it</h2>
+
+          <p>
+            I lead our four-person HackEdge team.
+            My focus has been building and testing the
+            audio interface, helping the different modules
+            work together, reviewing integration, and
+            keeping our development coordinated.
+          </p>
+
+          <div class="roles">
+
+            <div class="role">
+              <strong>My work · Audio + integration</strong>
+              <span>
+                Python text-to-speech, microphone and
+                speech-recognition interfaces, automated
+                tests, integration troubleshooting,
+                coordination, and PR review.
+              </span>
+            </div>
+
+            <div class="role">
+              <strong>Ari · Controller</strong>
+              <span>
+                Command interpretation and controller logic.
+              </span>
+            </div>
+
+            <div class="role">
+              <strong>Marcus · Computer vision</strong>
+              <span>
+                Visual detection and model pipeline.
+              </span>
+            </div>
+
+            <div class="role">
+              <strong>Sarah · Hardware</strong>
+              <span>
+                TI SK-AM62 board setup and hardware bring-up.
+              </span>
+            </div>
+
+          </div>
+
+          <p class="saam-note">
+            SAAMOS is a collaborative project.
+            These roles reflect our development responsibilities.
+          </p>
+
+        </section>
+
+        <!-- TESTING -->
+
+        <section class="story-panel" id="testing">
+
+          <h2>What we tested</h2>
+
+          <p>
+            Testing individual components before tying
+            them together was important because the
+            microphone, vision model, controller, and
+            hardware did not always develop at the same pace.
+          </p>
+
+          <ul>
+            <li>
+              Built automated Python tests for text-to-speech,
+              microphone handling, and speech-to-text.
+            </li>
+
+            <li>
+              Used mocked system calls and mock vision
+              output to validate command flows before
+              relying on every hardware component.
+            </li>
+
+            <li>
+              Tested scene-description, missing-object,
+              and stop-command responses through the
+              integrated controller.
+            </li>
+
+            <li>
+              Ran an integrated test suite during
+              development, with 62 tests reported passing
+              in a later local run.
+            </li>
+          </ul>
+
+          <div class="saam-callout">
+
+            <strong>What these results do—and don't—show:</strong>
+
+            Automated tests support software integration
+            confidence. They do not establish real-world
+            obstacle-detection accuracy, safety, or usability
+            for blind and low-vision users.
+
+          </div>
+
+        </section>
+
+        <!-- CHALLENGES -->
+
+        <section class="story-panel" id="challenges">
+
+          <h2>Engineering challenges & lessons</h2>
+
+          <h3>Getting multiple subsystems to agree</h3>
+
+          <p>
+            A working speech module alone isn't enough:
+            the controller must interpret commands,
+            the vision results need to be usable,
+            and the response has to reach the user clearly.
+            Mock interfaces let us keep progressing
+            while other parts were still under development.
+          </p>
+
+          <h3>Building for an embedded target</h3>
+
+          <p>
+            Developing on macOS while preparing the
+            TI SK-AM62 board required careful attention
+            to device-specific dependencies, offline
+            execution, and what could actually be tested
+            on each platform.
+          </p>
+
+          <h3>Leading with the user in mind</h3>
+
+          <p>
+            The biggest lesson is that technical functionality
+            and genuine accessibility are different milestones.
+            Real user feedback, reliability under changing
+            conditions, and appropriate safeguards matter
+            as much as passing code tests.
+          </p>
+
+        </section>
+
+        <!-- FUTURE DEVELOPMENT -->
+
+        <section class="story-panel" id="next">
+
+          <h2>What's next?</h2>
+
+          <ul>
+            <li>
+              Complete hardware-level testing with camera,
+              microphone, and audio output connected
+              to the board.
+            </li>
+
+            <li>
+              Record a clear end-to-end demonstration
+              with real inputs and explicitly show
+              any limitations.
+            </li>
+
+            <li>
+              Evaluate whether audio descriptions are
+              helpful, timely, and understandable
+              with input from intended users.
+            </li>
+
+            <li>
+              Document system architecture, latency,
+              and failure cases as testing matures.
+            </li>
+          </ul>
+
+          <p>
+            I'm especially excited to keep learning how
+            accessible design can guide better
+            engineering decisions.
+          </p>
+
+        </section>
+
+      </div>
+
+      <!-- DESKTOP SIDEBAR -->
+
+      <aside class="detail-aside">
+
+        <h2>On this page</h2>
+
+        <a href="#purpose">Why it matters</a>
+        <a href="#system">Architecture</a>
+        <a href="#demo">Prototype walkthrough</a>
+        <a href="#contribution">My role & team</a>
+        <a href="#testing">Testing</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#next">Next steps</a>
+
+        <hr>
+
+        <a
+          href="https://github.com/smirsr/SAAMOS"
+          target="_blank"
+          rel="noopener noreferrer">
+          SAAMOS on GitHub ↗
+        </a>
+
+        <a href="../index.html#projects">
+          All projects ↗
+        </a>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="detail-footer wrap">
+
+    <div class="detail-nav">
+
+      <a href="../index.html#projects">
+        ← Back to all projects
+      </a>
+
+      <a
+        href="../documents/Smridhi-Subedi-Resume.pdf"
+        target="_blank"
+        rel="noopener">
+        Resume ↗
+      </a>
+
+    </div>
+
+    <p>
+      Built with care for the people who use technology. ♡
+    </p>
+
+  </footer>
+
+</body>
+</html>
